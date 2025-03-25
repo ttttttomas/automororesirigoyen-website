@@ -2,6 +2,17 @@
 
 
 :root{
-  --color-primary: #4ff8d2;
+  --primary-color: #1e40af;
+  --secondary-color: #9333ea;
+}
+
+.bg-primary{
+  background-color: var(--primary-color);
+}
+
+.bg-home{
+  background-image: url(/bg-home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
