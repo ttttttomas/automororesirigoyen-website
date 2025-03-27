@@ -20,8 +20,7 @@ export default function Carrusel() {
   // }, 3000);
 
   return (
-    <section className="relative w-[90%] h-full mx-auto rounded-lg">
-      <div className="w-full md:h-[850px]">
+    <section className="relative w-[95%] md:h-[700px] mx-auto rounded-lg">
         <img
           src={images[current]}
           alt="hola"
@@ -29,17 +28,14 @@ export default function Carrusel() {
         />
         <div className="absolute inset-0 flex justify-between flex-col items-start p-6">
           <h1 className=" text-white drop-shadow-lg shadow-black md:text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
-        <div className="flex justify-between gap-[650px]">
-          <ul className="flex gap-5">
+          <ul className="absolute z-10 bottom-15 flex gap-5">
             <Whatsapp/>
             <Instagram />  
           </ul>
-          <div className="flex gap-10 text-white items-end">
+          <div className="flex justify-center absolute bottom-5 text-white gap-10 right-0 left-0">
             <p className="cursor-pointer hover:scale-120 transition-all" onClick={() => setCurrent(0)}>O</p>
             <p className="cursor-pointer hover:scale-120 transition-all" onClick={() => setCurrent(1)}>O</p>
           </div>
-        </div>
-        </div>
         </div>
     </section>
   );

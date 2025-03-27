@@ -4,7 +4,7 @@ export default function Whatsapp() {
   return (
     <svg
       viewBox="0 0 256 259"
-      className="md:w-[50px]"
+      className="md:w-[50px] w-[30px]"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid">
       <path

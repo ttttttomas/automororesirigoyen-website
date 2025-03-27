@@ -16,13 +16,13 @@ export default function Compraventa() {
             </Link>
             
             {/* Sección de venta */}
-            <Link href="/" className="md:w-1/2 rounded-b-2xl md:rounded-r-2xl font-bold group p-8 text-white/40 hover:text-white transition-all duration-700 bg-gray-800 flex flex-col justify-between">
+            <Link href="/" className="md:w-1/2 rounded-b-2xl md:rounded-r-2xl font-bold group p-8 text-white/40 hover:text-white transition-all duration-700 bg-black flex flex-col justify-between">
               <h2 className="text-2xl font-bold">¿Te Interesa Vender tu Auto?</h2>
               <p className="mt-20 text-sm">
                 Déjanos acompañarte en la venta de tu vehículo y recibe el apoyo necesario para que el proceso sea seguro y sencillo.
               </p>
               <div className="relative flex items-start">
-                <img src="auto2.png" alt="Auto venta" className="rounded-lg opacity-20 group-hover:opacity-80 duration-500" />
+                <img src="auto2.png" alt="Auto venta" className="rounded-lg opacity-40 group-hover:opacity-80 duration-500" />
               </div>
             </Link>
           </section>

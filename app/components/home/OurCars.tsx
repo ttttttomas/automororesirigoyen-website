@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 export default function OurCars() {
   return (
-    <section className='text-black'>
+    <section className='text-black flex flex-col'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros vehiculos</h2>
-        <ul className='grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] place-content-center gap-32 mx-20'>
+        <ul className='grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] place-content-center md:gap-32 gap-20 mx-20'>
             <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
                 <small className='p-5 text-md font-semibold'>Focus</small>
@@ -82,8 +82,8 @@ export default function OurCars() {
                     </svg>
                 </div>
             </Link>
-            
         </ul>
+        <Link className='font-bold md:text-end text-center px-10 mt-5 underline' href="/cars">Ver todos</Link >
     </section>
   )
 }
