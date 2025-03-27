@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-export const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300","400","500","600","700","800","900"]
-});
-
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
+  subsets: ["latin"], // "Latin" debe ser minúscula
+  weight: ["300", "400", "500", "600", "700", "800", "900"], // Los pesos deben ser strings
   variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["300","400","500","600","700","800","900"]
 })
 
 export const metadata: Metadata = {
@@ -26,12 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html className={`${montserrat.variable}`} lang="es">
+      <head>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${montserrat.className}antialiased bg-white/10`}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

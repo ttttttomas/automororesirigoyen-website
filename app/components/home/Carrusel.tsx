@@ -1,50 +1,46 @@
 'use client'
 import { useState } from "react";
-import Logo from "../icons/Logo";
-import Arrow from "../icons/Arrow";
-
+import Whatsapp from '../icons/Whatsapp'
+import Instagram from '../icons/Instagram'
 
 const images = [
-  "/bg-home.png", // Reemplazar con rutas reales de imágenes
   "/bg-home2.png",
+  "/bg-home3.png"
 ];
 
 export default function Carrusel() {
-  const [current, setCurrent] = useState(0);
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length)
-};
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  const [current, setCurrent] = useState(0)
+  // setTimeout(() => {
+  //   setCurrent(prevstate => prevstate + 1)
+  //   if(current === 2){
+  //     setCurrent(0)
+  //   }
+    
+  //   console.log(current)
+  // }, 3000);
 
   return (
-    <section className="relative w-full h-[1000px] bg-black rounded-lg overflow-hidden">
-      <div>
+    <section className="relative w-[90%] h-full mx-auto rounded-lg">
+      <div className="w-full md:h-[850px]">
         <img
           src={images[current]}
-          alt="Auto"
-          className="w-full h-full object-cover opacity-80"
+          alt="hola"
+          className="w-full h-full object-cover rounded-3xl opacity-80"
         />
-        <div className="pt-20 absolute inset-0 bg-opacity-50 flex flex-col items-start p-6">
-          <h1 className="text-white text-xl font-bold">¡Bienvenidos a Automotores Yrigoyen!</h1>
+        <div className="absolute inset-0 flex justify-between flex-col items-start p-6">
+          <h1 className="pt-18 text-white text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
+        <div className="flex justify-between gap-[650px]">
+          <ul className="flex gap-5">
+            <Whatsapp/>
+            <Instagram />  
+          </ul>
+          <div className="flex gap-10 text-white items-end">
+            <p className="cursor-pointer hover:scale-120 transition-all" onClick={() => setCurrent(0)}>O</p>
+            <p className="cursor-pointer hover:scale-120 transition-all" onClick={() => setCurrent(1)}>O</p>
+          </div>
         </div>
-      <div>
-      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-2 rounded-full">
-        <Arrow />
-      </button>
-      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-2 rounded-full">
-        <Arrow />
-      </button>
-      </div>
-      </div>
-      <div className="absolute bottom-4 left-6 flex space-x-4">
-        <a href="https://wa.me/xxxxxxxxxxx" className="text-green-500 text-2xl">
-          <Logo w={24}/>
-        </a>
-        <a href="https://instagram.com/xxxxxxxxxxx" className="text-pink-500 text-2xl">
-          <Logo w={24}/>
-        </a>
-      </div>
+        </div>
+        </div>
     </section>
   );
 }

@@ -4,6 +4,7 @@
 :root{
   --primary-color: #1e40af;
   --secondary-color: #9333ea;
+  scroll-behavior: smooth;
 }
 
 .bg-primary{
@@ -14,5 +15,10 @@
   background-image: url(/bg-home.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bg-process{
+  background: linear-gradient(179.72deg, #4A0202 0.24%, #7D0303 90.81%);
+
 }
 

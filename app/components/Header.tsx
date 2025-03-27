@@ -1,16 +1,17 @@
+
 import Lupa from './icons/Lupa'
-import Logo from './icons/Logo'
+import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className='z-10 fixed w-full flex justify-between px-10 py-3'>
-        <Logo w={90} />
-        <ul className='flex items-center gap-8 text-white font-bold'>
-            <li>Inicio</li>
-            <li>Comprar</li>
-            <li>Vender</li>
-            <li>Nosotros</li>
-            <li>Contacto</li>
+    <header className='z-10 fixed w-full flex justify-between px-10 backdrop-blur-sm'>
+        <img className='my-auto' width={80} src='./logoblack.png' />
+        <ul className='flex items-center gap-8 text-black font-bold'>
+            <Link href="/">Inicio</Link>
+            <Link href="/cars">Comprar</Link>
+            <Link href="/sales-contact">Vender</Link>
+            <Link href="/about-us">Nosotros</Link>
+            <Link href="/contact">Contacto</Link>
             <Lupa />
         </ul>
     </header>
