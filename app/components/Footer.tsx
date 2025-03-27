@@ -2,10 +2,10 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col mx-10 mt-10">
-        <section className="flex justify-between">
-            <img width={300} src="./logoblack.png"/>
-            <div className="flex flex-col w-52 my-5">
+    <footer className="flex flex-col bg-black text-white px-10 mt-10">
+        <section className="flex flex-col xl:flex-row items-center md:justify-between">
+            <img width={300} src="./logowhite.png"/>
+            <div className="flex flex-col md:w-52 my-5">
                 <p className="font-bold text-xl mb-5">Contacto</p>
                 <ul className="flex font-medium flex-col gap-2">
                     <li>Avenida H. Yrigoyen 1930 Gerli, Avellaneda B1869</li>
@@ -14,7 +14,7 @@ export default function Footer() {
                     <li>@automotoresyrigoyen</li>
                 </ul>
             </div>
-            <div className="flex flex-col w-52 my-5">
+            <div className="flex flex-col w-full md:w-52 my-5">
                 <p className="font-bold text-xl mb-5">Horarios</p>
                 <ul className="flex font-medium flex-col gap-2">
                     <li>
@@ -31,7 +31,7 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div className="flex flex-col justify-between w-72 my-5">
+            <div className="flex flex-col justify-between md:w-72 my-5">
                 <p className="font-bold text-xl mb-5">Financiación</p>
                     <div>
                         {/* <p>Luneas a Jueves</p> */}
@@ -40,12 +40,12 @@ export default function Footer() {
                             </Link> mediante el siguiente enlace
                         </p>
                     </div>
-                    <p>
+                    <p className="mt-5 md:mt-5">
                         <Link href="/" className="underline font-bold">Consultá nuestro financiamiento</Link>
                     </p>
             </div>
         </section>
-        <section className="flex font-bold border-t border-black/20 items-center justify-between">
+        <section className="flex flex-col md:flex-row text-xs font-bold border-t border-black/20 items-center justify-between">
             <p>©2025 Automoteres Irigoyen - Todos los derechos reservados</p>
             <div className="flex items-center gap-5">
                 <p>Desarrollado por</p>

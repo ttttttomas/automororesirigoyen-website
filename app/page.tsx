@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main className="pt-18">
       <Carrusel />
-      <section className="bg-red-500 text-black mt-10 py-5">
-        <ul className="flex justify-around">
+      <section className="bg-process text-black mt-10 py-5">
+        <ul className="flex md:flex-row gap-10 flex-col justify-around">
           <li className="flex flex-col items-center">
             <p className="font-bold text-5xl">1000</p>
             <small className="text-lg font-semibold">Clientes satisfechos</small>

@@ -28,7 +28,7 @@ export default function Carrusel() {
           className="w-full h-full object-cover rounded-3xl opacity-80"
         />
         <div className="absolute inset-0 flex justify-between flex-col items-start p-6">
-          <h1 className="pt-18 text-white text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
+          <h1 className=" text-white drop-shadow-lg shadow-black md:text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
         <div className="flex justify-between gap-[650px]">
           <ul className="flex gap-5">
             <Whatsapp/>

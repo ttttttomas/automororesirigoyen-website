@@ -1,67 +1,88 @@
 import React from 'react'
-import Logo from '../icons/Logo'
+import Link from 'next/link'
 
 export default function OurCars() {
   return (
     <section className='text-black'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros vehiculos</h2>
         <ul className='grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] place-content-center gap-32 mx-20'>
-            <li className='bg-white text-black'>
-                <p>Ford</p>
-                <small>Focus</small>
-                <img width="100%" src="bg-home2.png" alt="" />
-                <div className="flex">
-                <ul className='w-1/2'>
+            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+                <p className='font-bold text-xl px-5 pt-5'>Ford</p>
+                <small className='p-5 text-md font-semibold'>Focus</small>
+                <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
+                <div className="flex justify-between mx-2 items-center">
+                    <ul className='w-1/2 font-semibold'>
                     <li>100.000 kilometros</li>
                     <li>2010</li>
                     <li>Nafta</li>
-                    <li>$10.000.000</li>
-                </ul>
-                <Logo w="w-1/2" />
+                    <li className='font-extrabold'>$10.000.000</li>
+                    </ul>
+                    <img src='./logoblack.png' className='size-32' />
                 </div>
-            </li>
-            <li className='bg-white text-black'>
-                <p>Ford</p>
-                <small>Focus</small>
-                <img width="100%" src="bg-home2.png" alt="" />
-                <div className="flex">
-                <ul className='w-1/2'>
+                <div className='flex mx-20 justfy-center items-center'>
+                    <svg width="" className='bg-[#595959] transition-all duration-500 group-hover:bg-red-500 rounded-3xl' height="5" viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
+                    </svg>
+                </div>
+            </Link>
+            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+                <p className='font-bold text-xl px-5 pt-5'>Ford</p>
+                <small className='p-5 text-md font-semibold'>Focus</small>
+                <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
+                <div className="flex justify-between mx-2 items-center">
+                    <ul className='w-1/2 font-semibold'>
                     <li>100.000 kilometros</li>
                     <li>2010</li>
                     <li>Nafta</li>
-                    <li>$10.000.000</li>
-                </ul>
-                <Logo w="w-1/2" />
+                    <li className='font-extrabold'>$10.000.000</li>
+                    </ul>
+                    <img src='./logoblack.png' className='size-32' />
                 </div>
-            </li>
-            <li className='bg-white text-black'>
-                <p>Ford</p>
-                <small>Focus</small>
-                <img width="100%" src="bg-home2.png" alt="" />
-                <div className="flex">
-                <ul className='w-1/2'>
+                <div className='flex mx-20 justfy-center items-center'>
+                    <svg width="" className='bg-[#595959] transition-all duration-500 group-hover:bg-red-500 rounded-3xl' height="5" viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
+                    </svg>
+                </div>
+            </Link>
+            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+                <p className='font-bold text-xl px-5 pt-5'>Ford</p>
+                <small className='p-5 text-md font-semibold'>Focus</small>
+                <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
+                <div className="flex justify-between mx-2 items-center">
+                    <ul className='w-1/2 font-semibold'>
                     <li>100.000 kilometros</li>
                     <li>2010</li>
                     <li>Nafta</li>
-                    <li>$10.000.000</li>
-                </ul>
-                <Logo w="w-1/2" />
+                    <li className='font-extrabold'>$10.000.000</li>
+                    </ul>
+                    <img src='./logoblack.png' className='size-32' />
                 </div>
-            </li>
-            <li className='bg-white text-black'>
-                <p>Ford</p>
-                <small>Focus</small>
-                <img width="100%" src="bg-home2.png" alt="" />
-                <div className="flex">
-                <ul className='w-1/2'>
+                <div className='flex mx-20 justfy-center items-center'>
+                    <svg width="" className='bg-[#595959] transition-all duration-500 group-hover:bg-red-500 rounded-3xl' height="5" viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
+                    </svg>
+                </div>
+            </Link>
+            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+                <p className='font-bold text-xl px-5 pt-5'>Ford</p>
+                <small className='p-5 text-md font-semibold'>Focus</small>
+                <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
+                <div className="flex justify-between mx-2 items-center">
+                    <ul className='w-1/2 font-semibold'>
                     <li>100.000 kilometros</li>
                     <li>2010</li>
                     <li>Nafta</li>
-                    <li>$10.000.000</li>
-                </ul>
-                <Logo w="w-1/2" />
+                    <li className='font-extrabold'>$10.000.000</li>
+                    </ul>
+                    <img src='./logoblack.png' className='size-32' />
                 </div>
-            </li>
+                <div className='flex mx-20 justfy-center items-center'>
+                    <svg width="" className='bg-[#595959] transition-all duration-500 group-hover:bg-red-500 rounded-3xl' height="5" viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
+                    </svg>
+                </div>
+            </Link>
+            
         </ul>
     </section>
   )

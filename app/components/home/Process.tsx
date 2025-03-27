@@ -24,7 +24,7 @@ const [option] = useState({
             <option className='text-black' value="Compras">{option.option2}</option>
         </select>
         </div>
-        <section className='flex justify-center gap-0.5 w-full items-center'>
+        <section className='grid xl:flex md:grid-cols-2 md:px-10 items-center place-context-center place-items-center justify-center gap-0.5'>
           <div className='bg-process justify-evenly py-5 h-[400px] text-white gap-10 px-6 flex flex-col w-[300px]'>
             <Process1 />
             <p className='text-2xl font-bold'>Visita nuestra agencia</p>
