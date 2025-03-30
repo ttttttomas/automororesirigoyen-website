@@ -20,8 +20,8 @@ const [option] = useState({
         <div className='flex justify-center items-center gap-5'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros proceso en:</h2>
         <select className='text-2xl font-bold'>
-            <option className='text-black' value="Ventas">{option.option1}</option>
-            <option className='text-black' value="Compras">{option.option2}</option>
+            <option className='text-black' value="Compras">{option.option1}</option>
+            <option className='text-black' value="Ventas">{option.option2}</option>
         </select>
         </div>
         <section className='grid xl:flex md:grid-cols-2 md:px-10 items-center place-context-center place-items-center justify-center gap-0.5'>

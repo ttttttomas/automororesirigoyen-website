@@ -49,7 +49,9 @@ export default function Footer() {
             <p>©2025 Automoteres Irigoyen - Todos los derechos reservados</p>
             <div className="flex items-center gap-5">
                 <p>Desarrollado por</p>
-                <img width={70} src="./logoblack.png" alt="Logo iWeb" />
+                <Link target="blank" href="https://iwebtecnology.com">
+                <img className="w-20" src="./iweb.png" alt="Logo iWeb" />
+                </Link>
             </div>
         </section>
     </footer>

@@ -7,6 +7,10 @@
   scroll-behavior: smooth;
 }
 
+html{
+  font-family: Montserrat, sans-serif;
+}
+
 .bg-primary{
   background-color: var(--primary-color);
 }

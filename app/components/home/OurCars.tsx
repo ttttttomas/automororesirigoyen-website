@@ -6,7 +6,7 @@ export default function OurCars() {
     <section className='text-black flex flex-col'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros vehiculos</h2>
         <ul className='grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] place-content-center md:gap-32 gap-20 mx-20'>
-            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+            <Link href="/" className='bg-white py-5 hover:scale-105 rounded-2xl transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
                 <small className='p-5 text-md font-semibold'>Focus</small>
                 <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
@@ -25,7 +25,7 @@ export default function OurCars() {
                     </svg>
                 </div>
             </Link>
-            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+            <Link href="/" className='bg-white py-5 hover:scale-105 rounded-2xl transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
                 <small className='p-5 text-md font-semibold'>Focus</small>
                 <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
@@ -43,8 +43,7 @@ export default function OurCars() {
                         <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
                     </svg>
                 </div>
-            </Link>
-            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+            </Link><Link href="/" className='bg-white py-5 hover:scale-105 rounded-2xl transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
                 <small className='p-5 text-md font-semibold'>Focus</small>
                 <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />
@@ -62,8 +61,7 @@ export default function OurCars() {
                         <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
                     </svg>
                 </div>
-            </Link>
-            <Link href="/" className='bg-white py-5 group cursor-pointer text-black shadow-black/30 shadow-xl'>
+            </Link><Link href="/" className='bg-white py-5 hover:scale-105 rounded-2xl transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
                 <small className='p-5 text-md font-semibold'>Focus</small>
                 <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />

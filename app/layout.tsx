@@ -30,7 +30,7 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${montserrat.className}antialiased bg-[#fdf7f7]`}
+        className={`${montserrat.className}antialiased  bg-[#fdf7f7]`}
       >
         <Header />
         <Headermobile />
