@@ -9,7 +9,7 @@ export default function Header() {
         <ul className='md:flex hidden items-center gap-8 text-black font-bold'>
             <Link href="/">Inicio</Link>
             <Link href="/cars">Comprar</Link>
-            <Link href="/sales-contact">Vender</Link>
+            <Link href="/contact">Vender</Link>
             <Link href="/about-us">Nosotros</Link>
             <Link href="/contact">Contacto</Link>
             <Lupa />

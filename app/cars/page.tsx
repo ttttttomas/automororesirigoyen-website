@@ -1,7 +1,9 @@
 import Filters from "../components/cars/Filters";
-import ProcessCompra from "../components/cars/ProcessCompra";
 import Products from "../components/cars/Products";
+
+
 import { FiltersProvider } from "../context/FiltersContext";
+import ProcessVenta from "../components/home/ProcessVenta";
 
 const cars = [
     { id: 1, name: "Civic", category: "honda",año:2011 , km:2 ,tipo:"Auto", precio: 1203210 },
@@ -16,16 +18,20 @@ const cars = [
   { id: 10, name: "Corvette", category: "renault",año:2013 , km:63 ,tipo:"Auto", precio: 5467 },
   { id: 11, name: "Civic", category: "peugeot",año:2010 , km:5748 ,tipo:"Camioneta", precio: 6789 },
   { id: 12, name: "Camry", category: "chevrolet",año:2016 , km:4588 ,tipo:"Auto", precio: 2345 },
-  { id: 13, name: "Civic", category: "chevrolet",año:2018 , km:435534 ,tipo:"Auto", precio: 96789 },
-  { id: 14, name: "Camry", category: "peugeot",año:2010 , km:345543 ,tipo:"Camioneta", precio: 4576765 },
+
 ]
 
 export default function CarsPage() {
 
   return (
     <FiltersProvider>
-    <section className="pt-18 h-full">
-        <ProcessCompra />
+    <section className="md:pt-18 h-full flex flex-col-reverse md:flex-col">
+    <section className='text-black'>
+        <div className='flex justify-center items-center gap-5'>
+        <h2 className='text-center my-8 font-bold text-3xl'>Nuestros proceso en Compras</h2>
+        </div>
+        <ProcessVenta />
+    </section>
         <div className="flex flex-col my-20 lg:flex-row xl:items-start">
         <Filters />
         <Products products={cars}/>

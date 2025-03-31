@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-black text-white px-10 mt-10">
+    <footer className="flex flex-col bg-black text-white px-10 pt-10 pb-18 mt-10">
         <section className="flex flex-col xl:flex-row items-center md:justify-between">
             <img width={300} src="./logowhite.png"/>
             <div className="flex flex-col md:w-52 my-5">
@@ -40,9 +40,7 @@ export default function Footer() {
                             </Link> mediante el siguiente enlace
                         </p>
                     </div>
-                    <p className="mt-5 md:mt-5">
-                        <Link href="/" className="underline font-bold">Consultá nuestro financiamiento</Link>
-                    </p>
+                        <Link href="/" className="underline font-bold mt-5 md:mt-5 md:text-center">Consultá nuestro financiamiento</Link>
             </div>
         </section>
         <section className="flex flex-col md:flex-row text-xs font-bold border-t border-black/20 items-center justify-between">

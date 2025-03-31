@@ -32,7 +32,7 @@ export default function Home() {
       <Process />
       <Compraventa />
       <Opinions />
-      <Map width="100%" height={"200px"}/>
+      <Map width="100%" height="200px"/>
     </main>
   );
 }

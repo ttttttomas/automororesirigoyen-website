@@ -26,3 +26,10 @@ html{
 
 }
 
+.bg-form{
+  background-image: url(/bg-form.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
