@@ -33,3 +33,10 @@ html{
   background-position: center;
 }
 
+.bg-logo{
+  background-image: url(/logoaut3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}

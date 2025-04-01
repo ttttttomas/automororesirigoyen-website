@@ -41,7 +41,7 @@ export default function ContactPage () {
           {activeTab === 'vender' ? (
               <Sales />
             ) : (
-                <Form />
+              <Form />
             )}
         </div>
       </div>

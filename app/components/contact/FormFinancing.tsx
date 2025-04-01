@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 
 export default function Form() {
@@ -25,19 +26,48 @@ export default function Form() {
         // Lógica para enviar los datos
       };
   return (
-    <section className="flex w-full text-white items-center py-5 justify-center rounded-xl" 
+    <section className="flex w-full text-white items-center py-5 justify-center" 
          style={{
-           backgroundImage: "url('./bg-form2.png')",
+           backgroundImage: "url('./bg-form.png')",
            backgroundSize: 'cover',
            backgroundPosition: 'center'
          }}>
       {/* Contenedor del formulario con fondo negro semitransparente */}
       <div className="md:w-[700px] w-full bg-opacity-70 bg-black/40 backdrop-blur-xl rounded-xl p-8 shadow-2xl">
-        <h1 className="text-3xl font-bold text-center mb-6 text-white">Contactanos</h1>
+        <h1 className="text-3xl font-bold text-start mb-6 text-white">Financiamiento de:</h1>
         
         <form onSubmit={handleSubmit}>
           {/* Grupo de campos */}
+          <div className="rounded-xl flex justify-center bg-white text-black w-max mx-auto">
+            <img src="./bg-home2.png" className="rounded-l-xl" width={150} alt="" />
+            <div className="flex flex-col justify-center items-center mx-3">
+            <small className="text-start font-medium">Fiat Cronos 6.2 2010</small>
+            <b>Precio contado $32.000.000</b>
+            </div>
+          </div>
           <div>
+            <div className='flex flex-col gap-2'>
+              <label className="block text-sm font-medium text-white mb-1">Nombre y apellido</label>
+              <input
+                type="text"
+                name="modeloYear"
+                value={formData.modeloYear}
+                onChange={handleChange}
+                className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Nombre y apellido"
+              />
+            </div>
+            <div className='flex flex-col gap-2'>
+              <label className="block text-sm font-medium text-white mb-1">Telefono</label>
+              <input
+                type="text"
+                name="modeloYear"
+                value={formData.modeloYear}
+                onChange={handleChange}
+                className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Telefono"
+              />
+            </div>
             <div className='flex flex-col gap-2'>
               <label className="block text-sm font-medium text-white mb-1">Nombre y apellido</label>
               <input
@@ -83,18 +113,6 @@ export default function Form() {
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Motivo"
-              />
-            </div>
-
-            <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-white mb-1">Breve descripción</label>
-              <textarea
-                name="detalles"
-                value={formData.detalles}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ej: Quiero cambiar o vender mi auto"
-                rows= {3}
               />
             </div>
             
