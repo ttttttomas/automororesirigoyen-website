@@ -3,7 +3,7 @@ import Products from "../components/cars/Products";
 
 
 import { FiltersProvider } from "../context/FiltersContext";
-import ProcessVenta from "../components/home/ProcessVenta";
+  import ProcessCompra from "../components/home/ProcessCompra";
 
 const cars = [
     { id: 1, name: "Civic", category: "honda",año:2011 , km:2 ,tipo:"Auto", precio: 1203210 },
@@ -30,7 +30,7 @@ export default function CarsPage() {
         <div className='flex justify-center items-center gap-5'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros proceso en Compras</h2>
         </div>
-        <ProcessVenta />
+        <ProcessCompra />
     </section>
         <div className="flex flex-col my-20 lg:flex-row xl:items-start">
         <Filters />
