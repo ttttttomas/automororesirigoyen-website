@@ -27,7 +27,7 @@ export default function AboutsUsPage() {
                 </li>
                 <li className="flex flex-col gap-5 items-center justify-between font-bold">
                     <p>Te acompañamos en todo el proceso</p>
-                    <img src="./why2.png" width={90} height={110} alt="why2" />
+                    <img src="./Why2.png" width={90} height={110} alt="why2" />
                 </li>
                 <li className="flex flex-col gap-5 items-center justify-between font-bold">
                     <p className="text-red-500">Entrega inmediata</p>

@@ -1,7 +1,11 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {usePathname} from "next/navigation";
 
 export default function Form() {
+
+    const pathname = usePathname();
+    const [text, setText] = useState(false);
     const [formData, setFormData] = useState({
         modeloYear: '',
         modelo: '',
@@ -11,6 +15,10 @@ export default function Form() {
         nombreCompleto: '',
         telefono: ''
       });
+    useEffect(() => {
+      if (pathname === "/financing/") {
+        setText(true)}
+    }, [])
     
       const handleChange = (e) => {
         const { name, value } = e.target;
@@ -43,6 +51,7 @@ export default function Form() {
             <div className="flex flex-col justify-center items-center mx-3">
             <small className="text-start font-medium">Fiat Cronos 6.2 2010</small>
             <b>Precio contado $32.000.000</b>
+            {text && <p>Hola</p>}
             </div>
           </div>
           <div>

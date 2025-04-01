@@ -24,12 +24,12 @@ export default function Headermobile() {
             </svg>
             <p className='text-xs font-bold'>Comprar</p>
         </Link>
-        <Link href="/sales-contact" className='flex flex-col items-center justify-center gap-2'>
+        <Link href="/financing" className='flex flex-col items-center justify-center gap-2'>
             <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.7998 1V23" stroke={path === "/sales-contact" ? "#920A0A" : "#898989"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M15.2999 5H8.5499C7.71447 5 6.91326 5.36875 6.32252 6.02513C5.73178 6.6815 5.3999 7.57174 5.3999 8.5C5.3999 9.42826 5.73178 10.3185 6.32252 10.9749C6.91326 11.6313 7.71447 12 8.5499 12H13.0499C13.8853 12 14.6865 12.3688 15.2773 13.0251C15.868 13.6815 16.1999 14.5717 16.1999 15.5C16.1999 16.4283 15.868 17.3185 15.2773 17.9749C14.6865 18.6313 13.8853 19 13.0499 19H5.3999" stroke={path === "/sales-contact" ? "#920A0A" : "#898989"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10.7998 1V23" stroke={path === "/financing" ? "#920A0A" : "#898989"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M15.2999 5H8.5499C7.71447 5 6.91326 5.36875 6.32252 6.02513C5.73178 6.6815 5.3999 7.57174 5.3999 8.5C5.3999 9.42826 5.73178 10.3185 6.32252 10.9749C6.91326 11.6313 7.71447 12 8.5499 12H13.0499C13.8853 12 14.6865 12.3688 15.2773 13.0251C15.868 13.6815 16.1999 14.5717 16.1999 15.5C16.1999 16.4283 15.868 17.3185 15.2773 17.9749C14.6865 18.6313 13.8853 19 13.0499 19H5.3999" stroke={path === "/financing" ? "#920A0A" : "#898989"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <p className='text-xs font-bold'>Vender</p>
+            <p className='text-xs font-bold'>Financiación</p>
         </Link>
         <Link href="/about-us" className='flex flex-col items-center justify-center gap-2'>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
