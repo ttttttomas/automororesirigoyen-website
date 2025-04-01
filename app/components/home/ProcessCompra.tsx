@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Process1 from '../icons/Process1'
 import Process2 from '../icons/Process2'
 import Process3 from '../icons/Process3'
