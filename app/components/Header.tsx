@@ -11,7 +11,7 @@ export default function Header() {
         <ul className='md:flex hidden items-center gap-8 text-black font-bold'>
             <Link className='hover:scale-110 transition-all duration-200' href="/">Inicio</Link>
             <Link className='hover:scale-110 transition-all duration-200' href="/cars">Comprar</Link>
-            <Link className='hover:scale-110 transition-all duration-200' href="/financing">Financiación</Link>
+            <Link className='hover:scale-110 transition-all duration-200' href="/sell">Vender</Link>
             <Link className='hover:scale-110 transition-all duration-200' href="/about-us">Nosotros</Link>
             <Link className='hover:scale-110 transition-all duration-200' href="/contact">Contacto</Link>
             <Lupa />
