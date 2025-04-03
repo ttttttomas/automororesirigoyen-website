@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Card({product}) {
+type Props = {
+  product?: number;
+};
+
+export default function Card({product: product}: Props) {
   return (
     <Link href={`/cars/${product}`} className='bg-white pb-3 hover:scale-105 rounded-2xl mx-5 transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
