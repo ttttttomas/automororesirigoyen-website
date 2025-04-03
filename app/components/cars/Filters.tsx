@@ -13,26 +13,29 @@ interface Cars {
   name: string;
   category: string;
   año: number;
+  combustible: string;
   precio: number;
   km: number;
   tipo: string;
 }
 
 const cars: Cars[] = [
-  { id: 1, name: "Civic", category: "honda",año:2011 , km:2 ,tipo:"Auto", precio: 1203210 },
-  { id: 2, name: "Accord", category: "honda",año:2013 , km:123 ,tipo:"Auto", precio: 5243 },
-  { id: 3, name: "Mustang", category: "ford",año:2010 , km:231321 ,tipo:"camioneta", precio: 234 },
-  { id: 4, name: "Fiesta", category: "ford",año:2010 , km:35665 ,tipo:"Auto", precio: 234243 },
-  { id: 5, name: "Camaro", category: "volkswagen",año:2010 , km:77756 ,tipo:"Auto", precio: 1203210 },
+  { id: 1, name: "Civic", category: "honda",año:2011 ,combustible:"Nafta/GNC" , km:2 ,tipo:"Auto", precio: 1203210 },
+  { id: 2, name: "Accord", category: "honda",año:2013 ,combustible:"Diesel" , km:123 ,tipo:"Auto", precio: 5243 },
+  { id: 3, name: "Mustang", category: "ford",año:2010 ,combustible:"Nafta/GNC" , km:231321 ,tipo:"camioneta", precio: 234 },
+  { id: 4, name: "Fiesta", category: "ford",año:2010 ,combustible:"Diesel" , km:35665 ,tipo:"Auto", precio: 234243 },
+  { id: 5, name: "Camaro", category: "volkswagen",año:2010 ,combustible:"Nafta/GNC" , km:77756 ,tipo:"Auto", precio: 1203210 },
   // { id: 6, name: "Corvette", category: "automotores",año:2018 , km:345 ,tipo:"Camioneta", precio: 8796 },
-  { id: 7, name: "Civic", category: "peugeot",año:2012 , km:4343 ,tipo:"Auto", precio: 7869 },
-  { id: 8, name: "Citroen", category: "citroen",año:2012 , km:234 ,tipo:"Auto", precio: 46546 },
-  { id: 9, name: "Camry", category: "renault",año:2010 , km:11 ,tipo:"Camioneta", precio: 23 },
-  { id: 10, name: "Corvette", category: "renault",año:2013 , km:63 ,tipo:"Auto", precio: 5467 },
-  { id: 11, name: "Civic", category: "peugeot",año:2010 , km:5748 ,tipo:"Camioneta", precio: 6789 },
-  { id: 12, name: "Camry", category: "chevrolet",año:2016 , km:4588 ,tipo:"Auto", precio: 2345 },
-  { id: 13, name: "Civic", category: "chevrolet",año:2018 , km:435534 ,tipo:"Auto", precio: 96789 },
-  { id: 14, name: "Camry", category: "peugeot",año:2010 , km:345543 ,tipo:"Camioneta", precio: 4576765 },
+  { id: 7, name: "Civic", category: "peugeot",año:2012 ,combustible:"Diesel" , km:4343 ,tipo:"Auto", precio: 7869 },
+  { id: 8, name: "Citroen", category: "citroen",año:2012 ,combustible:"Nafta" , km:234 ,tipo:"Auto", precio: 46546 },
+  { id: 9, name: "Camry", category: "renault",año:2010 ,combustible:"Nafta/GNC" , km:11 ,tipo:"Camioneta", precio: 23 },
+  { id: 10, name: "Corvette", category: "renault",año:2013 ,combustible:"Nafta" , km:63 ,tipo:"Auto", precio: 5467 },
+  { id: 11, name: "Civic", category: "peugeot",año:2010 ,combustible:"Nafta" , km:5748 ,tipo:"Camioneta", precio: 6789 },
+  { id: 12, name: "Camry", category: "chevrolet",año:2016 ,combustible:"Nafta" , km:4588 ,tipo:"Auto", precio: 2345 },
+  { id: 13, name: "Civic", category: "chevrolet",año:2018 ,combustible:"Nafta/GNC" , km:435534 ,tipo:"Auto", precio: 96789 },
+  { id: 14, name: "Camry", category: "peugeot",año:2010 ,combustible:"Nafta" , km:345543 ,tipo:"Camioneta", precio: 4576765 },
+  { id: 15, name: "Camry", category: "toyota",año:2010 ,combustible:"Diesel" , km:345543 ,tipo:"Camioneta", precio: 4576765 },
+  { id: 16, name: "Camry", category: "nissan",año:2010 ,combustible:"Diesel" , km:345543 ,tipo:"Camioneta", precio: 4576765 },
 ]
 
 const images = [
@@ -44,6 +47,8 @@ const images = [
   { id: "6", src: "./logo-peugeot.png", alt: "peugeot" },
   { id: "7", src: "./logo-renault.png", alt: "renault" },
   { id: "8", src: "./citroen.png", alt: "citroen" },
+  { id: "9", src: "./logo-toyota.png", alt: "toyota" },
+  { id: "10", src: "./logo-nissan.png", alt: "nissan" },
 ];
 
 export default function ProductsFilters() {
@@ -61,6 +66,7 @@ export default function ProductsFilters() {
 
   useEffect(() => {
   handleCategoryChange(images[currentIndex].alt);
+  console.log(filteredCars)
 }, [currentIndex]);
 
   const handleChangeMinKm = (e) => {
@@ -97,6 +103,18 @@ export default function ProductsFilters() {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
   
+  const handleClick = () => {
+    setFilters({
+      categoria: 'all',
+      tipo: 'all',
+      año: 'all',
+      combustible: 'all',
+      minKm: '0', 
+      minPrice: '0',
+    })
+    setCurrentIndex(1);
+  }
+
   const filteredCars = filterProducts(cars);
 
   return (
@@ -151,12 +169,18 @@ export default function ProductsFilters() {
             <option value="2010">2010</option>
             <option value="2011">2011</option>
           </select>
-          <p className="font-bold">Modelo</p>
-
+          <p className="font-bold">Combustible</p>
+          <select className="w-full text-black" name="combustible" id="combustible" onChange={handleChangeFilters}>
+            <option value="all">Ver todos</option>
+            <option value="Nafta">Nafta</option>
+            <option value="Nafta/GNC">Nafta/GNC</option>
+            <option value="Diesel">Diesel</option>
+          </select>
           <p className="font-bold">Kilometraje</p>
           <div className="flex gap-2">
             <p className="flex ">Minimo:</p>
             <input
+              value={filters.minKm}
               id={minKmId}
               min='0'
               max='3000'
@@ -172,6 +196,7 @@ export default function ProductsFilters() {
           <div className="flex justify-between gap-2">
           <p className="flex ">Minimo:</p>
               <input
+              value={filters.minPrice}
               id={minPriceId}
               min='0'
               max='20000'
@@ -184,14 +209,14 @@ export default function ProductsFilters() {
               ${filters.minPrice}
           </div>
         </div>
-
+        <button onClick={handleClick} className="my-5 bg-red-500 text-white font-bold px-10 rounded-xl cursor-pointer py-2">Limpiar filtros</button>
       </div>
-        {filteredCars.lenght < 0 ? <p>No hay productos que coincidan con los criterios de búsqueda</p> : <Products products={filteredCars} />}
-        <footer className="absolute top-[-90px] left-0 right-0 text-center">
+        { <Products products={filteredCars} />}
+        {/* <footer className="absolute top-[-90px] left-0 right-0 text-center">
           {
             JSON.stringify(filters,null,2)
           }
-        </footer>
+        </footer> */}
     </section>
   );
 }
