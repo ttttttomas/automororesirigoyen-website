@@ -36,7 +36,7 @@ export default function Form() {
   return (
     <section className="flex w-full text-white items-center py-5 justify-center" 
          style={{
-           backgroundImage: "url('./bg-form.png')",
+           backgroundImage: "url('/bg-form.png')",
            backgroundSize: 'cover',
            backgroundPosition: 'center'
          }}>

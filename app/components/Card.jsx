@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Card() {
+export default function Card({product}) {
   return (
-    <Link href="/" className='bg-white pb-3 hover:scale-105 rounded-2xl mx-5 transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
+    <Link href={`/cars/${product}`} className='bg-white pb-3 hover:scale-105 rounded-2xl mx-5 transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>Ford</p>
                 <small className='p-5 text-md font-semibold'>Focus</small>
                 <img className='mt-5 mb-2' width="100%" src="bg-home2.png" alt="" />

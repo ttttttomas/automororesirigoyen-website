@@ -212,11 +212,6 @@ export default function ProductsFilters() {
         <button onClick={handleClick} className="my-5 bg-red-500 text-white font-bold px-10 rounded-xl cursor-pointer py-2">Limpiar filtros</button>
       </div>
         { <Products products={filteredCars} />}
-        {/* <footer className="absolute top-[-90px] left-0 right-0 text-center">
-          {
-            JSON.stringify(filters,null,2)
-          }
-        </footer> */}
     </section>
   );
 }
