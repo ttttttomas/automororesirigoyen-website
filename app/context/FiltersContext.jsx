@@ -4,18 +4,28 @@ import { createContext, useState } from "react";
 export const FiltersContext = createContext();
 
 export const FiltersProvider = ({ children }) => {
-  const [filters, setFilters] = useState({
-    tipo: "",
-    año: "",
-    minKm: "",
-    maxKm: "",
-    minPrice: "",
-    maxPrice: "",
 
+  const [filters, setFilters] = useState({
+    categoria: 'all',
+    tipo: 'all',
+    año: 'all',
+    minKm: '0',
+    minPrice: '0',
   });
-  
+
+  const filterProducts = (products) => {
+    return products.filter((product) => {
+      return (
+        (filters.categoria === 'all' || product.category === filters.categoria) &&
+        (filters.tipo === 'all' || product.tipo === filters.tipo) &&
+        (filters.año === 'all' || product.año.toString() === filters.año) &&
+        (!filters.minKm || product.km >= (filters.minKm)) &&
+        (!filters.minPrice || product.precio >= (filters.minPrice)) 
+      );
+    });
+  };
   return (
-    <FiltersContext.Provider value={{ filters, setFilters }}>
+    <FiltersContext.Provider value={{ filters, setFilters, filterProducts }}>
       {children}
     </FiltersContext.Provider>
   );

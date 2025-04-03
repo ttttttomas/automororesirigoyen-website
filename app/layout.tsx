@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Headermobile from "./components/Headermobile";
 
+import { CarsProvider } from "./context/CarsContext";
+
 const montserrat = Montserrat({
   subsets: ["latin"], // "Latin" debe ser minúscula
   weight: ["300", "400", "500", "600", "700", "800", "900"], // Los pesos deben ser strings
@@ -32,10 +34,12 @@ export default function RootLayout({
       <body
         className={`${montserrat.className}antialiased  bg-[#fdf7f7]`}
       >
+        <CarsProvider>
         <Header />
         <Headermobile />
         {children}
         <Footer />
+        </CarsProvider>
       </body>
     </html>
   );
