@@ -36,7 +36,7 @@ export default function Opinions() {
               className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="mb-6 flex items-start justify-center gap-5">
-                <Star />
+                <Star color={'#CE0000'}/>
                 <p>5</p>
               </div>
               <p className="text-gray-600 mb-6">{testimonial.text}</p>

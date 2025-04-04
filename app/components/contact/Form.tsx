@@ -32,7 +32,7 @@ export default function Form() {
            backgroundPosition: 'center'
          }}>
       {/* Contenedor del formulario con fondo negro semitransparente */}
-      <div className="md:w-[700px] w-full bg-opacity-70 bg-black/40 backdrop-blur-xl rounded-xl p-8 shadow-2xl">
+      <div className="md:w-[700px] w-full bg-opacity-70 md:bg-black/40 backdrop-blur-md md:backdrop-blur-xl rounded-xl p-8 shadow-2xl">
         <h1 className="text-3xl font-bold text-center mb-6 text-white">Contactanos</h1>
         
         <form onSubmit={handleSubmit}>

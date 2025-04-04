@@ -28,7 +28,7 @@ export default function Carrusel() {
         />
         <div className="absolute inset-0 flex justify-between flex-col items-start p-6">
           <h1 className=" text-white drop-shadow-lg shadow-black md:text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
-          <ul className="absolute z-10 bottom-15 flex gap-5">
+          <ul className="absolute  bottom-15 flex gap-5">
             <Whatsapp/>
             <Instagram />  
           </ul>
