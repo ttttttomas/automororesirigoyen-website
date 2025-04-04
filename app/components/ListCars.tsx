@@ -1,8 +1,15 @@
 import {useState} from 'react'
 import Link from 'next/link'
 
+type Car = {
+    id: number,
+    name: string,
+    model: string,
+    year: number
+}
+
 export default function ListCars({onChange}) {
-    const [cars] = useState<any>([{
+    const [cars] = useState<Car[]>([{
         id: 1,
         name: "Toyota",
         model: "Corolla",
@@ -23,8 +30,8 @@ export default function ListCars({onChange}) {
         <div className='flex flex-col items-center'>
           <p className='text-center my-2 font-bold'>Que estas buscando?</p>
           <ul className='flex flex-col w-full gap-2'>
-            {cars == 0 && <p className='text-center my-2 text-black'>No hay autos</p>}
-            {cars.map((car: any) => (
+            {cars.length == 0 && <p className='text-center my-2 font-bold'>Cars not found</p>}
+            {cars.map((car: Car) => (
               <Link key={car.id} href={`/cars/${car.id}`} onClick={redirectCar} className='flex items-center justify-around gap-2'>
               <img src="./logo-toyota.png" className='w-18' alt="logo toyota" />
               <div className='flex flex-col items-start'>
