@@ -1,9 +1,7 @@
 'use client'
 import Filters from "../components/cars/Filters";
-
 import { FiltersProvider } from "../context/FiltersContext";
-  import ProcessCompra from "../components/home/ProcessCompra";
-
+ import ProcessCompra from "../components/home/ProcessCompra";
 
 export default function CarsPage() {
   return (

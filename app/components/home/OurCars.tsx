@@ -12,7 +12,7 @@ export default function OurCars() {
             <Card/>
             <Card/>
         </ul>
-        <Link className='font-bold md:text-end text-center px-10 mt-5 underline' href="/cars">Ver todos</Link >
+        <Link className='font-bold md:text-end text-center px-10 text-2xl mt-5 underline' href="/cars">Ver todos</Link >
     </section>
   )
 }

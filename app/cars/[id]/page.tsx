@@ -1,3 +1,4 @@
+import CarruselImg from "@/app/components/cars/CarruselImg";
 import Link from "next/link";
 
 export default function CardIdPage() {
@@ -6,15 +7,7 @@ export default function CardIdPage() {
   return (
     <main className="pt-18 flex flex-col">
         <section className="flex flex-col md:flex-row items-center justify-around">
-            <div className="flex flex-col justify-between md:justify-center items-center">
-                <img className="w-[500px]" src="/logo-toyota.png" alt="" />
-                <div className="flex justify-center items-center">
-                <img className="md:w-[200px] w-[100px]" src="/logo-toyota.png" alt="" />
-                <img className="md:w-[200px] w-[100px]" src="/logo-toyota.png" alt="" />
-                <img className="md:w-[200px] w-[100px]" src="/logo-toyota.png" alt="" />
-                <img className="md:w-[200px] w-[100px]" src="/logo-toyota.png" alt="" />
-                </div>
-            </div>
+            <CarruselImg />
             <div className="flex flex-col shadow-black/50 shadow-xl md:py-12 md:px-16 md:m-0 m-6 px-8 py-4">
               <h1 className="text-3xl font-semibold">Chevrolet Camaro 6.2 Coupe Ss V8</h1>
               <div className="flex flex-col gap-2 my-5">

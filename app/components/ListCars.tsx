@@ -28,7 +28,7 @@ export default function ListCars({onChange}) {
   return (
     <section className='absolute bg-white shadow-lg z-50 shadow-black/40 text-red-500 top-17 w-full md:w-[400px] right-0'>
         <div className='flex flex-col items-center'>
-          <p className='text-center my-2 font-bold'>Que estas buscando?</p>
+          <input placeholder='¿Que vehiculo estás buscando?' className='px-5 w-full text-black md:text-base text-sm my-2 font-bold' type="text" />
           <ul className='flex flex-col w-full gap-2'>
             {cars.length == 0 && <p className='text-center my-2 font-bold'>Cars not found</p>}
             {cars.map((car: Car) => (

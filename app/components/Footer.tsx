@@ -1,38 +1,54 @@
 import Link from "next/link"
+import Ubi from "./icons/Ubi";
+import Insta from "./icons/Insta";
+import Mail from "./icons/Mail";
+import Cel from "./icons/Cel";
 
 export default function Footer() {
   return (
     <footer className="flex flex-col bg-black text-white px-10 pt-10 pb-18 md:pb-0 mt-10">
         <section className="flex flex-col xl:flex-row items-center md:justify-between">
             <img width={300} src="./logowhite.png"/>
-            <div className="flex flex-col md:w-52 my-5">
-                <p className="font-bold text-xl mb-5">Contacto</p>
-                <ul className="flex font-medium flex-col gap-2">
-                    <li>Avenida H. Yrigoyen 1930 Gerli, Avellaneda B1869</li>
-                    <li>+54 9 11 6857-2052</li>
-                    <li>Mail</li>
-                    <li>@automotoresyrigoyen</li>
-                </ul>
-            </div>
-            <div className="flex flex-col w-full md:w-52 my-5">
-                <p className="font-bold text-xl mb-5">Horarios</p>
-                <ul className="flex font-medium flex-col gap-2">
-                    <li>
-                        <p>Luneas a Jueves</p>
-                        <p>10:30hs a 19:00hs</p>
+            <div className="flex gap-3 items-center flex-col md:w-52 my-5">
+                <p className="font-bold text-3xl mb-5">Contacto</p>
+                <ul className="flex text-xs md:text-sm font-medium flex-col gap-4">
+                    <li className="flex gap-5 items-center justify-start">
+                        <Ubi />
+                        <p>Avenida H. Yrigoyen 1930 Gerli, Avellaneda B1869</p>
                     </li>
-                    <li>
-                        <p>Viernes</p>
-                        <p>10:30hs a 17:00hs</p>
+                    <li className="flex gap-5 items-center justify-start">
+                        <Cel />
+                        <p>+54 9 11 6857-2052</p>
                     </li>
-                    <li>
-                        <p>Sabados</p>
-                        <p>10:30hs a 15:00hs</p>
+                    <li className="flex gap-5 items-center justify-start">
+                        <Mail />
+                        <p>automotoresyrigoyen@gmail.com</p>
+                    </li>
+                    <li className="flex gap-5 items-center justify-start">
+                        <Insta />
+                        <p>@automotoresyrigoyen</p>
                     </li>
                 </ul>
             </div>
-            <div className="flex flex-col justify-between md:w-72 my-5">
-                <p className="font-bold text-xl mb-5">Financiación</p>
+            <div className="flex items-center  flex-col w-full md:w-52 my-5">
+                <p className="font-bold text-3xl mb-5">Horarios</p>
+                <ul className="flex font-medium flex-col gap-5">
+                    <li>
+                        <p className="text-center text-red-500 font-bold">Luneas a Jueves</p>
+                        <p className="text-start">10:30hs a 19:00hs</p>
+                    </li>
+                    <li>
+                        <p className="text-center text-red-500 font-bold">Viernes</p>
+                        <p className="text-start">10:30hs a 17:00hs</p>
+                    </li>
+                    <li>
+                        <p className="text-center text-red-500 font-bold">Sabados</p>
+                        <p className="text-start">10:30hs a 15:00hs</p>
+                    </li>
+                </ul>
+            </div>
+            <div className="flex items-center flex-col justify-between gap-5 md:w-72 my-5">
+                <p className="font-bold text-3xl mb-5">Financiación</p>
                     <div>
                         {/* <p>Luneas a Jueves</p> */}
                         <p>Podes simular la financiación del 
