@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import Whatsapp from '../icons/Whatsapp'
 import Instagram from '../icons/Instagram'
 
 const images = [
