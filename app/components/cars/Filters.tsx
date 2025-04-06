@@ -119,7 +119,7 @@ export default function ProductsFilters() {
 
   return (
     <section className="p-4 flex items-start md:w-full flex-col md:flex-row h-full bg-white justify-center relative">
-      <div className="flex flex-col items-center justify-center relative md:w-1/4 w-full">
+      <div className="flex flex-col items-center justify-center relative md:w-[500px] w-full">
         
         <div className="mx-4 flex items-center justify-center">
           <button
@@ -158,19 +158,19 @@ export default function ProductsFilters() {
 
         <div className="flex gap-2 flex-col items-start justify-center">
           <p className="font-bold">Tipo de vehiculo</p>
-          <select className="w-full text-black" name="tipo" id="tipo" onChange={handleChangeFilters}>
+          <select value={filters.tipo} className="w-full text-black" name="tipo" id="tipo" onChange={handleChangeFilters}>
             <option value="all">Ver todos</option>
             <option value="Camioneta">Camioneta</option>
             <option value="Auto">Auto</option>
           </select>
           <p className="font-bold">Año</p>
-          <select className="w-full" id="año" name='año' onChange={handleChangeFilters}>
+          <select value={filters.año} className="w-full" id="año" name='año' onChange={handleChangeFilters}>
             <option value="all">Ver todos</option>
             <option value="2010">2010</option>
             <option value="2011">2011</option>
           </select>
           <p className="font-bold">Combustible</p>
-          <select className="w-full text-black" name="combustible" id="combustible" onChange={handleChangeFilters}>
+          <select  value={filters.combustible} className="w-full text-black" name="combustible" id="combustible" onChange={handleChangeFilters}>
             <option value="all">Ver todos</option>
             <option value="Nafta">Nafta</option>
             <option value="Nafta/GNC">Nafta/GNC</option>

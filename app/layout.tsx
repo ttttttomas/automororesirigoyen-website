@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Headermobile from "./components/Headermobile";
 
 import { CarsProvider } from "./context/CarsContext";
+import Whatsapp from "./components/icons/Whatsapp";
 
 const montserrat = Montserrat({
   subsets: ["latin"], // "Latin" debe ser minúscula
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         <Headermobile />
         {children}
+        <Whatsapp />
         <Footer />
         </CarsProvider>
       </body>

@@ -12,10 +12,12 @@ export default function CardIdPage() {
               <h1 className="text-3xl font-semibold">Chevrolet Camaro 6.2 Coupe Ss V8</h1>
               <div className="flex flex-col gap-2 my-5">
                 <small className="text-sm">Precio contado</small>
-                <b className="text-lg">$32.000.000</b>
+                <b className="text-2xl">$32.000.000</b>
+                <small>Anticipo: $5.000.000</small>
                 <div className="flex flex-col text-lg gap-2 my-5">
                 <p>Año: 2020</p>
                 <p>Kilometraje: 2.000km</p>
+                <p>Combustible: Nafta</p>
                 </div>
               </div>
             <Link className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href="/financing">Consultar financiamiento</Link>
@@ -43,7 +45,7 @@ export default function CardIdPage() {
                     <li>Tipo Frenos ABS:</li>
                     <li>Bolsas de Aire Frontales:</li>
                     <li>Acepta permuta:</li>
-                    <li>Anticipo: $</li>
+                    <li>Airbag: </li>
                 </ul>
             </div>
         </section>

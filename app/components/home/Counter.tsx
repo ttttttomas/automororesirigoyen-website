@@ -46,7 +46,7 @@ export default function CounterUpPage() {
                 />
                 <Star color={'#fff'}/>
             </div>
-            <small className="text-lg font-semibold">Calificación en Google</small>
+            <small className="text-lg font-semibold">Calificación en <a target='_blank' href='https://www.google.com/maps/place/Automotores+Yrigoyen/@-34.6797303,-58.384203,21z/data=!4m8!3m7!1s0x95bccd66d36f5e33:0xf2d6bdb8b28a2b36!8m2!3d-34.6797695!4d-58.3840237!9m1!1b1!16s%2Fg%2F11j00s6b4_?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D' className='underline'>Google</a></small>
           </li>
         </ul>
       </section>
