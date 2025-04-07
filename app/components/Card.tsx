@@ -20,7 +20,7 @@ export default function Card({product: product}: Props) {
                     <img src='./logo-chevrolet.png' className='w-20' />
                 </div>
                 <div className='flex mx-20 justfy-center items-center'>
-                    <svg className='bg-[#595959] transition-all duration-500 group-hover:bg-red-500 rounded-3xl mt-3' height="5" viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className='bg-[#595959] transition-all group-hover:bg-red-500 rounded-3xl mt-3' height="5" viewBox="0 0 302 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="296.162" y1="5.56396" x2="5.35129" y2="5.56396" stroke="" strokeWidth="7" strokeLinecap="round"/>
                     </svg>
                 </div>

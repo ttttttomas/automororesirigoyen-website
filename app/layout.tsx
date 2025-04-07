@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Headermobile from "./components/Headermobile";
+import { unstable_ViewTransition as ViewTransition } from "react";
 
 import { CarsProvider } from "./context/CarsContext";
 import Whatsapp from "./components/icons/Whatsapp";
@@ -37,9 +38,11 @@ export default function RootLayout({
       >
         <CarsProvider>
         <Header />
+        <ViewTransition name="page">
         <Headermobile />
         {children}
         <Whatsapp />
+        </ViewTransition>
         <Footer />
         </CarsProvider>
       </body>

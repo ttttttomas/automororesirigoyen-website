@@ -11,9 +11,11 @@ const images = [
 export default function Carrusel() {
   const [current, setCurrent] = useState(0)
 
-  // setTimeout(() => {
-  //   setCurrent(prevstate => prevstate + 1)    
-  // }, 3000);
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
+
+  setTimeout(() => {
+    nextSlide()
+  }, 3000);
 
   return (
     <section className="relative w-[90%] md:h-[700px] mx-auto">
