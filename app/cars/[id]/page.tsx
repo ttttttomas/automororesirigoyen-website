@@ -1,8 +1,34 @@
+'use client'
 import CarruselImg from "@/app/components/cars/CarruselImg";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useContext, useEffect } from "react";
+import { CarsContext } from "@/app/context/CarsContext";
+// import { useRouter } from "next/router";
+
 
 export default function CardIdPage() {
+  // const router = useRouter();
+  const params = useParams();
 
+  const id = params.ID;
+
+  const {getCarbyId} = useContext(CarsContext);
+
+  useEffect(() => {
+    const loadCar = async () => {
+      const response = await getCarbyId(id);
+      console.log(response);
+      // const marca = response.marca
+      // const modelo = response.modelo
+      // const precio = response.precio
+    } 
+    loadCar()
+  }, [])
+
+  const handleCLick = () => {
+}
+  
     
   return (
     <main className="pt-18 flex flex-col">
@@ -20,7 +46,7 @@ export default function CardIdPage() {
                 <p>Combustible: Nafta</p>
                 </div>
               </div>
-            <Link className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href="/financing">Consultar financiamiento</Link>
+            <Link onClick={handleCLick} className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href={`/financing/${id}`}>Consultar financiamiento</Link>
             </div>
         </section>
         <section className="md:w-full px-10 mt-10">

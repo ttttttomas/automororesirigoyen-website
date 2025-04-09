@@ -23,7 +23,7 @@ export const CarsProvider = ({ children }) => {
   }
 
   const formFinancing = async (car) => {
-    const response = await axios.post(`${baseURL}/financing`, car)
+    const response = await axios.post(`${baseURL}/financial`, car)
     return response.data
   }
 
