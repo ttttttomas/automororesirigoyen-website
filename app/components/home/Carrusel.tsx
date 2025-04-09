@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import Instagram from '../icons/Instagram'
 
 const images = [
   "/bg-home.jpeg",
@@ -11,11 +10,11 @@ const images = [
 export default function Carrusel() {
   const [current, setCurrent] = useState(0)
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
+  // const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
-  setTimeout(() => {
-    nextSlide()
-  }, 3000);
+  // setTimeout(() => {
+  //   nextSlide()
+  // }, 3000);  
 
   return (
     <section className="relative w-[90%] md:h-[700px] mx-auto">
@@ -26,10 +25,6 @@ export default function Carrusel() {
         />
         <div className="absolute inset-0 flex justify-between flex-col items-start p-6">
           <h1 className=" text-white drop-shadow-lg shadow-black md:text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
-          <ul className="absolute items-center bottom-15 flex gap-5">
-            <Instagram />  
-            <p className="text-white font-bold">Instagram</p>
-          </ul>
           <div className="flex justify-center absolute bottom-5 text-white gap-10 right-0 left-0">
             <p className="cursor-pointer hover:scale-120 transition-all" onClick={() => setCurrent(0)}>O</p>
             <p className="cursor-pointer hover:scale-120 transition-all" onClick={() => setCurrent(1)}>O</p>

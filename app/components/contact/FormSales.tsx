@@ -1,10 +1,12 @@
-import { useState } from 'react';
+'use client'
+  import { useState } from 'react';
 
 const CotizaAutoForm = () => {
   const [formData, setFormData] = useState({
     modeloYear: '',
     modelo: '',
     email: '',
+    imagen: '',
     detalles: '',
     marca: '',
     nombreCompleto: '',
@@ -84,6 +86,17 @@ const CotizaAutoForm = () => {
                 className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Ej: Quiero cambiar o vender mi auto"
                 rows= {3}
+              />
+            </div>
+
+            <div className='flex flex-col gap-2 mb-2'>
+              <label className="block text-sm font-medium text-white mb-1">Imagen</label>
+              <input
+                type='file'
+                name="imagen"
+                value={formData.imagen}
+                onChange={handleChange}
+                className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             

@@ -19,7 +19,7 @@ export default function Header() {
             <Link className='hover:scale-110 transition-all duration-200 backdrop-blur-3xl px-3 py-1 rounded-xl' href="/cars">Comprar</Link>
             <Link className='hover:scale-110 transition-all duration-200 backdrop-blur-3xl px-3 py-1 rounded-xl' href="/sell">Vender</Link>
             <Link className='hover:scale-110 transition-all duration-200 backdrop-blur-3xl px-3 py-1 rounded-xl' href="/about-us">Nosotros</Link>
-            <Link className='hover:scale-110 transition-all duration-200 backdrop-blur-3xl px-3 py-1 rounded-xl' href="/contact">Contacto</Link>
+            {/* <Link className='hover:scale-110 transition-all duration-200 backdrop-blur-3xl px-3 py-1 rounded-xl' href="/contact">Contacto</Link> */}
         </ul>
         <Lupa onClick={toggleMenu}/>
       </div>

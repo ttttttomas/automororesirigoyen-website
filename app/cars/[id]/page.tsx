@@ -45,7 +45,7 @@ export default function CardIdPage() {
                     <li>Tipo Frenos ABS:</li>
                     <li>Bolsas de Aire Frontales:</li>
                     <li>Acepta permuta:</li>
-                    <li>Airbag: </li>
+                    <li>Traccion: </li>
                 </ul>
             </div>
         </section>

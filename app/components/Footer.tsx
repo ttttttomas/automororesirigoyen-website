@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Ubi from "./icons/Ubi";
-import Insta from "./icons/Insta";
+import Instagram from "./icons/Instagram";
 import Mail from "./icons/Mail";
 import Cel from "./icons/Cel";
 
@@ -25,16 +25,16 @@ export default function Footer() {
                         <p>automotoresyrigoyen@gmail.com</p>
                     </li>
                     <li className="flex gap-5 items-center justify-start">
-                        <Insta />
+                        <Instagram />
                         <p>@automotoresyrigoyen</p>
                     </li>
                 </ul>
             </div>
-            <div className="flex items-center  flex-col w-full md:w-52 my-5">
+            <div className="flex items-center  flex-col w-full md:w-52 md:my-5">
                 <p className="font-bold text-3xl mb-5">Horarios</p>
                 <ul className="flex font-medium flex-col gap-5">
                     <li>
-                        <p className="text-center text-red-500 font-bold">Luneas a Jueves</p>
+                        <p className="text-center text-red-500 font-bold">Lunes a Jueves</p>
                         <p className="text-start">10:30hs a 19:00hs</p>
                     </li>
                     <li>
@@ -47,15 +47,8 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div className="flex items-center flex-col justify-between gap-5 md:w-72 my-5">
+            <div className="flex items-center flex-col justify-between md:w-72 my-10 md:my-5">
                 <p className="font-bold text-3xl mb-5">Financiación</p>
-                    <div>
-                        {/* <p>Luneas a Jueves</p> */}
-                        <p>Podes simular la financiación del 
-                            <Link href="/" className="underline font-bold"> Banco Santander
-                            </Link> mediante el siguiente enlace
-                        </p>
-                    </div>
                         <Link href="/" className="underline font-bold mt-5 md:mt-5 md:text-center">Consultá nuestro financiamiento</Link>
             </div>
         </section>

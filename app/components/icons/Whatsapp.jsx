@@ -3,11 +3,10 @@ import React from "react";
 
 export default function Whatsapp() {
   return (
-    <Link className="fixed group bottom-22 flex items-center backdrop-blur-lg transition-all text-black font-bold gap-3 md:bottom-15 right-3 md:right-10" target="_blank" href='https://wa.me/5491168572052'>
-      <p className="hidden md:group-hover:block bg-white/30 p-2 rounded-lg transition-all animate-bounce">Contactanos por Whatsapp!</p>
+    <Link className="" target="_blank" href='https://wa.me/5491168572052'>
       <svg
         viewBox="0 0 256 259"
-        className="md:w-[50px] w-[40px]"
+        className="md:w-[50px] w-[40px] z-0"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid">
         <path

@@ -7,7 +7,7 @@ import Headermobile from "./components/Headermobile";
 import { unstable_ViewTransition as ViewTransition } from "react";
 
 import { CarsProvider } from "./context/CarsContext";
-import Whatsapp from "./components/icons/Whatsapp";
+import Social from "./components/Social";
 
 const montserrat = Montserrat({
   subsets: ["latin"], // "Latin" debe ser minúscula
@@ -41,7 +41,7 @@ export default function RootLayout({
         <ViewTransition name="page">
         <Headermobile />
         {children}
-        <Whatsapp />
+        <Social />
         </ViewTransition>
         <Footer />
         </CarsProvider>
