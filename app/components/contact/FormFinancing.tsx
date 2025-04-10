@@ -146,6 +146,7 @@ export default function Form() {
           >
             Enviar
           </button>
+          <p className="font-bold text-center mt-10">BRINDAMOS FINANCIACION A TRAVES DE CREDITOS PERSONALES O PRENDARIOS. LOS MISMOS SON EN PESOS, PUEDE SER TASA FIJA O UVA.</p>
         </form>
       </div>
     </section>

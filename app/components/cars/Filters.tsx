@@ -7,23 +7,28 @@ import Arrow2 from "./Arrow2";
 import { FiltersContext } from "@/app/context/FiltersContext";
 import { CarsContext } from "@/app/context/CarsContext";
 import Products from "./Products";
+import Loading from "../Loading";
 
 
 const images = [
   { id: "1", src: "/logo-chevrolet.png", alt: "Chevrolet" },
   { id: "2", src: "./logoblack.png", alt: "all" },
-  { id: "3", src: "./logo-volks.png", alt: "Volkswagen" },
   { id: "4", src: "./Logo-ford.png", alt: "Ford" },
-  { id: "5", src: "./Logo-honda.png", alt: "Honda" },
+  {id: "11", src: "/logo-fiat.png", alt:"Fiat"},
   { id: "6", src: "./logo-peugeot.png", alt: "Peugeot" },
-  { id: "7", src: "./logo-renault.png", alt: "Renault" },
   { id: "8", src: "./citroen.png", alt: "Citroen" },
+  { id: "7", src: "./logo-renault.png", alt: "Renault" },
   { id: "9", src: "./logo-toyota.png", alt: "Toyota" },
+  { id: "3", src: "./logo-volks.png", alt: "Volkswagen" },
+  { id: "5", src: "./Logo-honda.png", alt: "Honda" },
   { id: "10", src: "./logo-nissan.png", alt: "Nissan" },
+  {id: "12", src: "/logo-hyundai.png", alt:"Hyundai"},
+
 ];
 
 export default function ProductsFilters() {
   const {getCars, cars, setCars} = useContext(CarsContext);
+  const [loading, setLoading] = useState(true)
   const {filters, filterProducts, setFilters} = useContext(FiltersContext);
 
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -38,6 +43,7 @@ useEffect(() => {
     const response = await getCars();
     console.log(response);
     setCars(response);
+    setLoading(false)
   };
   loadCars();
 }, []);
@@ -86,7 +92,8 @@ useEffect(() => {
     setFilters({
       categoria: 'all',
       tipo: 'all',
-      año: 'all',
+      minAño: 2010,
+      maxAño: 2025,
       combustible: 'all',
       minKm: 0, 
       minPrice: 9000000,
@@ -95,10 +102,9 @@ useEffect(() => {
   }
 
   const filteredCars = filterProducts(cars);
-  console.log(filteredCars)
   return (
-    <section className="p-4 flex items-start md:w-full flex-col md:flex-row h-full bg-white justify-center relative">
-      <div className="flex flex-col items-center justify-center relative md:w-[500px] w-full">
+    <section className="p-4 flex items-start md:w-full flex-col md:flex-row h-full bg-white justify-between relative">
+      <div className="flex flex-col items-center justify-center relative md:w-[400px] w-full">
         
         <div className="mx-4 flex items-center justify-center">
           <button
@@ -140,15 +146,15 @@ useEffect(() => {
           <select value={filters.tipo} className="w-full text-black" name="tipo" id="tipo" onChange={handleChangeFilters}>
             <option value="all">Ver todos</option>
             <option value="Camioneta">Camioneta</option>
-            <option value="Auto"  >Auto</option>
+            <option value="Auto">Auto</option>
           </select>
+
           <p className="font-bold">Año</p>
-          <select value={filters.año} className="w-full" id="año" name='año' onChange={handleChangeFilters}>
-            <option value="all">Ver todos</option>
-            <option value="2010">2010</option>
-            <option value="2011">2011</option>
-            <option value="2017">2017</option>
-          </select>
+          <div className="flex gap-5 flex-col md:flex-row mx-auto justify-between">
+            <input value={filters.minAño} name="minAño" onChange={handleChangeFilters} placeholder="Año minimo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
+            <input value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
+          </div>
+
           <p className="font-bold">Combustible</p>
           <select  value={filters.combustible} className="w-full text-black" name="combustible" id="combustible" onChange={handleChangeFilters}>
             <option value="all">Ver todos</option>
@@ -156,6 +162,7 @@ useEffect(() => {
             <option value="Nafta/GNC">Nafta/GNC</option>
             <option value="Diesel">Diesel</option>
           </select>
+
           <p className="font-bold">Kilometraje</p>
           <div className="flex gap-2">
             <p className="flex ">Minimo:</p>
@@ -176,7 +183,7 @@ useEffect(() => {
           <div className="flex justify-between gap-2">
           <p className="flex ">Minimo:</p>
               <input
-              value={minPrice}
+              value={filters.minPrice}
               id={minPriceId}
               min='9000000'
               max='16800000'
@@ -190,8 +197,9 @@ useEffect(() => {
           </div>
         </div>
         <button onClick={handleClick} className="my-5 bg-red-500 text-white font-bold px-10 rounded-xl cursor-pointer py-2">Limpiar filtros</button>
+        <p className="text-white hidden">{minPrice}</p>
       </div>
-        { <Products products={filteredCars} />}
+        {loading ? <Loading /> : <Products products={filteredCars} />}
     </section>
   );
 }

@@ -2,48 +2,46 @@
 import CarruselImg from "@/app/components/cars/CarruselImg";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CarsContext } from "@/app/context/CarsContext";
-// import { useRouter } from "next/router";
-
+import Loading from "@/app/components/Loading";
 
 export default function CardIdPage() {
-  // const router = useRouter();
   const params = useParams();
-
-  const id = params.ID;
 
   const {getCarbyId} = useContext(CarsContext);
 
+  const [currentCar, setCurrentCar] = useState(null);
+  const id = params.ID;
+  
   useEffect(() => {
-    const loadCar = async () => {
-      const response = await getCarbyId(id);
-      console.log(response);
-      // const marca = response.marca
-      // const modelo = response.modelo
-      // const precio = response.precio
-    } 
-    loadCar()
+    async function loadCar() {
+      const response = await getCarbyId(id); // <-- tu función que trae el producto
+      console.log("🚗 Producto:", response);
+      setCurrentCar(response);
+    }
+  
+    loadCar();
   }, [])
 
-  const handleCLick = () => {
-}
-  
-    
+  const handleCLick = () => {}
+
   return (
     <main className="pt-18 flex flex-col">
+        {currentCar ? 
+        <main className="pt-18 flex flex-col">
         <section className="flex flex-col md:flex-row items-center justify-around">
-            <CarruselImg />
+          <CarruselImg product={currentCar} />
             <div className="flex flex-col shadow-black/50 shadow-xl md:py-12 md:px-16 md:m-0 m-6 px-8 py-4">
-              <h1 className="text-3xl font-semibold">Chevrolet Camaro 6.2 Coupe Ss V8</h1>
+              <h1 className="text-3xl font-semibold">{currentCar.marca} {currentCar.modelo}</h1>
               <div className="flex flex-col gap-2 my-5">
                 <small className="text-sm">Precio contado</small>
-                <b className="text-2xl">$32.000.000</b>
-                <small>Anticipo: $5.000.000</small>
+                <b className="text-2xl"> ${currentCar.precio.toLocaleString("es-AR")}</b>
+                <small> ${parseInt(currentCar.anticipo.toLocaleString("es-AR"))}</small>
                 <div className="flex flex-col text-lg gap-2 my-5">
-                <p>Año: 2020</p>
-                <p>Kilometraje: 2.000km</p>
-                <p>Combustible: Nafta</p>
+                <p>Año: {currentCar.anio}</p>
+                <p>Kilometraje: {currentCar.km}</p>
+                <p>Combustible: {currentCar.combustible}</p>
                 </div>
               </div>
             <Link onClick={handleCLick} className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href={`/financing/${id}`}>Consultar financiamiento</Link>
@@ -75,10 +73,9 @@ export default function CardIdPage() {
                 </ul>
             </div>
         </section>
-        <section className="bg-form flex flex-col md:flex-row justify-around items-center md:gap-0 gap-10 py-10 px-10 mt-10">
-          <h6 className="md:text-4xl text-2xl text-center font-bold">Necesitas asesoramiento?</h6>
-          <Link className="bg-red-500 px-10 py-2 font-semibold rounded-xl text-white md:text-2xl text-xl" href='/contact'>Contactanos</Link>
-        </section>
+    </main> :
+    <Loading />
+    }
     </main>
   )
 }

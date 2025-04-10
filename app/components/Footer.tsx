@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center flex-col justify-between md:w-72 my-10 md:my-5">
                 <p className="font-bold text-3xl mb-5">Financiación</p>
-                        <Link href="/" className="underline font-bold mt-5 md:mt-5 md:text-center">Consultá nuestro financiamiento</Link>
+                        <Link href="/financing" className="underline font-bold mt-5 md:mt-5 md:text-center">Consultá nuestro financiamiento</Link>
             </div>
         </section>
         <section className="flex flex-col md:flex-row text-xs font-bold border-t border-black/20 items-center justify-between">

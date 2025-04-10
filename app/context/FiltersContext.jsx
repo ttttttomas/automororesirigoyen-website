@@ -8,7 +8,8 @@ export const FiltersProvider = ({ children }) => {
   const [filters, setFilters] = useState({
     categoria: 'all',
     tipo: 'all',
-    año: 'all',
+    minAño: 2010,
+    maxAño: 2025,
     combustible: 'all',
     minKm: 0,
     minPrice: 0,
@@ -19,10 +20,11 @@ export const FiltersProvider = ({ children }) => {
       return (
         (filters.categoria === 'all' || product.marca === filters.categoria) &&
         (filters.tipo === 'all' || product.tipo === filters.tipo) &&
-        (filters.año === 'all' || product.anio.toString() === filters.año) &&
+        (!filters.minAño || product.anio >= parseInt(filters.minAño)) &&
+        (!filters.maxAño || product.anio <= parseInt(filters.maxAño)) &&
         (filters.combustible === 'all' || product.combustible === filters.combustible) &&
-        (!filters.minKm || product.km >= (filters.minKm)) &&
-        (!filters.minPrice || product.precio >= (filters.minPrice)) 
+        (!filters.minKm || product.km >= filters.minKm) &&
+        (!filters.minPrice || product.precio >= filters.minPrice)
       );
     });
   };

@@ -12,7 +12,7 @@ export default function CounterUpPage() {
             <CountUp
             className='text-5xl font-bold'
             start={0}
-            end={500}
+            end={200}
             duration={4}
             separator=","
             decimals={0}
@@ -26,7 +26,7 @@ export default function CounterUpPage() {
             <CountUp
             className='text-5xl font-bold'
             start={0}
-            end={30}
+            end={20}
             duration={4}
             separator=","
             decimals={0}

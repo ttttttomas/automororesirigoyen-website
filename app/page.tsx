@@ -1,6 +1,6 @@
 import Carrusel from "./components/home/Carrusel";
 import Compraventa from "./components/home/Compraventa";
-// import OurCars from './components/home/OurCars'
+import OurCars from './components/home/OurCars'
 import CounterUpPage from "./components/home/Counter";
 import Wheel from './components/home/Wheel'
 import Process from './components/home/Process'
@@ -16,7 +16,7 @@ export default function Home() {
       <CounterUpPage />
       <Process />
       <Wheel />
-      {/* <OurCars /> */}
+      <OurCars />
       <Compraventa />
       <Opinions />
       <Map width="100%" height="200px"/>
