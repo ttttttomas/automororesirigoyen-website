@@ -12,7 +12,7 @@ export default function CardIdPage() {
   const {getCarbyId} = useContext(CarsContext);
 
   const [currentCar, setCurrentCar] = useState(null);
-  const id = params.ID;
+  const id = params.id;
   
   useEffect(() => {
     async function loadCar() {
