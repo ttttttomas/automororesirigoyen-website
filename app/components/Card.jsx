@@ -5,7 +5,7 @@ export default function Card({car}) {
     <Link href={`/cars/${car.ID}`} className='bg-white flex flex-col justify-between pb-5 hover:scale-105 rounded-2xl mx-5 transition-all group cursor-pointer text-black shadow-black/30 shadow-xl'>
                 <p className='font-bold text-xl px-5 pt-5'>{car.marca}</p>
                 <small className='px-5 text-md font-semibold'>{car.modelo}</small>
-                <img className='mt-5 mb-2' width="100%" height={10} src={car.imagen1} alt={`Imagen ${car.marca}`} />
+                <img className='mt-5 mb-2' width="100%" src={car.imagen1} alt={`Imagen ${car.marca}`} />
                 <div className="flex justify-between mx-2 items-center">
                     <ul className='w-1/2 font-semibold'>
                     <li className="md:text-md text-xs">{car.km}</li>

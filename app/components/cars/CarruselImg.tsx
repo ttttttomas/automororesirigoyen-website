@@ -10,8 +10,7 @@ export default function CarruselImg({ product }) {
     product.imagen3,
     product.imagen4,
   ]
-  console.log(images)
-
+  
   const prevSlide = () =>
     setIndex((prev) => (prev - 1 + images.length) % images.length);
   const nextSlide = () =>

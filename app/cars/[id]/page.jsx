@@ -1,19 +1,22 @@
 'use client'
 import CarruselImg from "@/app/components/cars/CarruselImg";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { CarsContext } from "@/app/context/CarsContext";
 import Loading from "@/app/components/Loading";
+import { useCarForm } from "@/app/context/FormContext";
 
-export default function CardIdPage() {
-  const params = useParams();
+
+export default function CardIdPage({ params }) {
+
+  const { setCarFromForm, carFromForm } = useCarForm()
 
   const {getCarbyId} = useContext(CarsContext);
 
   const [currentCar, setCurrentCar] = useState(null);
   const id = params.id;
-  
+  console.log(id)
+
   useEffect(() => {
     async function loadCar() {
       const response = await getCarbyId(id); // <-- tu función que trae el producto
@@ -24,7 +27,10 @@ export default function CardIdPage() {
     loadCar();
   }, [])
 
-  const handleCLick = () => {}
+  const handleClick = () => {
+    setCarFromForm(currentCar)
+    console.log(carFromForm + 'Producto agregado al contexto')
+  }
 
   return (
     <main className="pt-18 flex flex-col">
@@ -44,7 +50,7 @@ export default function CardIdPage() {
                 <p>Combustible: {currentCar.combustible}</p>
                 </div>
               </div>
-            <Link onClick={handleCLick} className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href={`/financing/${id}`}>Consultar financiamiento</Link>
+            <Link onClick={handleClick} className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href={`/financing`}>Consultar financiamiento</Link>
             </div>
         </section>
         <section className="md:w-full px-10 mt-10">

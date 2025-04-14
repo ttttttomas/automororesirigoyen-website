@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Headermobile from "./components/Headermobile";
 import { unstable_ViewTransition as ViewTransition } from "react";
+import { FormContextProvider } from './context/FormContext';
 
 import { CarsProvider } from "./context/CarsContext";
 import Social from "./components/Social";
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className}antialiased  bg-[#fdf7f7]`}
       >
+        <FormContextProvider>
         <CarsProvider>
         <Header />
         <ViewTransition name="page">
@@ -45,6 +47,7 @@ export default function RootLayout({
         </ViewTransition>
         <Footer />
         </CarsProvider>
+        </FormContextProvider>
       </body>
     </html>
   );
