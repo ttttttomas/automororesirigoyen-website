@@ -79,12 +79,12 @@ export default function Form() {
         {loading ? <Loading /> : 
         <form onSubmit={handleSubmit}>
         {/* Grupo de campos */}
-        {carFromForm ? <div className="rounded-xl flex items-center justify-center bg-white text-black w-full mx-auto">
-          <img src={carFromForm.imagen1} className="h-52" width={150} alt={'Auto ' + carFromForm.marca + ' ' + carFromForm.modelo} />   
-          <div className="flex flex-col justify-center items-center mx-3">
-            <small ref={marcaCarRef} className="text-start font-medium">{carFromForm.marca}</small>
-            <small ref={modeloCarRef} className="text-start font-medium">{carFromForm.modelo}</small>
-            <b ref={priceCarRef}>{carFromForm.precio}</b>
+        {carFromForm ? <div className="rounded-xl flex items-center justify-center gap-20 bg-white text-black w-full mx-auto">
+          <img src={carFromForm.imagen1} className="h-52 object-cover" width={400} alt={'Auto ' + carFromForm.marca + ' ' + carFromForm.modelo} />   
+          <div className="flex flex-col mx-3">
+            <small ref={marcaCarRef} className="text-center text-xl font-bold">{carFromForm.marca}</small>
+            <small ref={modeloCarRef} className="text-center text-xl font-bold">{carFromForm.modelo}</small>
+            <b className="text-center text-red-500" ref={priceCarRef}>${carFromForm.precio.toLocaleString("es-AR")}</b>
           </div>
         </div> :
         <div className="rounded-xl flex items-center h-96 justify-between bg-white text-black w-full">
@@ -177,6 +177,7 @@ export default function Form() {
           Enviar
         </button>
         <p className="font-bold text-center mt-10">BRINDAMOS FINANCIACION A TRAVES DE CREDITOS PERSONALES O PRENDARIOS. LOS MISMOS SON EN PESOS, PUEDE SER TASA FIJA O UVA.</p>
+        <p className="text-center font-bold mt-5 underline">*Esto es solo una simulación, en el caso de que se apruebe nos contactaremos para seguir el proceso si es lo que se desea.*</p>
       </form>}
       </div>
     </section>

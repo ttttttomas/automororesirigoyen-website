@@ -44,7 +44,7 @@ const CotizaAutoForm = () => {
           {/* Grupo de campos */}
           <div className="text-black">
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Año del modelo</label>
+              <label className="block text-sm font-medium text-white mb-1">Año del modelo</label>
               <input
                 type="text"
                 name="year_model"
@@ -56,7 +56,7 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Modelo</label>
+              <label className="block text-sm font-medium text-white mb-1">Modelo</label>
               <input
                 type="text"
                 name="modelo"
@@ -68,7 +68,7 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Marca</label>
+              <label className="block text-sm font-medium text-white mb-1">Marca</label>
               <input
                 type="text"
                 name="marca"
@@ -80,7 +80,7 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Mail</label>
+              <label className="block text-sm font-medium text-white mb-1">Mail</label>
               <input
                 type="email"
                 name="mail"
@@ -92,7 +92,7 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Detalles</label>
+              <label className="block text-sm font-medium text-white mb-1">Detalles</label>
               <textarea
                 name="detalles"
                 value={formData.detalles}
@@ -104,7 +104,7 @@ const CotizaAutoForm = () => {
             </div>
 
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Imagen</label>
+              <label className="block text-sm font-medium text-white mb-1">Imagen</label>
               <input
                 type='file'
                 name="imagen"
@@ -116,7 +116,7 @@ const CotizaAutoForm = () => {
             
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Nombre y apellido</label>
+              <label className="block text-sm font-medium text-white mb-1">Nombre y apellido</label>
               <input
                 type="text"
                 name="nombre_apellido"
@@ -128,7 +128,7 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-black mb-1">Teléfono</label>
+              <label className="block text-sm font-medium text-white mb-1">Teléfono</label>
               <input
                 type="tel"
                 name="telefono"
@@ -142,7 +142,7 @@ const CotizaAutoForm = () => {
           {/* Botón de enviar */}
           <button
             type="submit"
-            className="w-full mt-7 bg-red-500 hover:bg-red-800 cursor-pointer font-medium py-3 px-4 rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            className="w-full mt-7 text-white font-bold bg-red-500 hover:bg-red-800 cursor-pointer py-3 px-4 rounded-lg transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
           >
             Enviar
           </button>

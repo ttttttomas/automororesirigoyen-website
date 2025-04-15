@@ -10,7 +10,7 @@ export default function OurCars() {
   useEffect(() => {
     const loadCars = async () => {
       const initialCars = await getCars()
-      const carsFiltered = initialCars.filter(car => car.anio >= 2016 )
+      const carsFiltered = initialCars.filter(car => car.anio >= 2012 )
       setCars(carsFiltered)
     }
     loadCars()
@@ -19,7 +19,7 @@ export default function OurCars() {
     <section className='text-black flex flex-col'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros vehiculos</h2>
         <ul className='grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] place-content-center md:gap-32 gap-20 mx-20'>
-          {cars.slice(0,4).map((car) => (
+          {cars.slice(5,9).map((car) => (
             <Card key={car.ID} car={car} />
           ))} 
         </ul>

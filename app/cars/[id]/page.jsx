@@ -15,7 +15,7 @@ export default function CardIdPage({ params }) {
 
   const [currentCar, setCurrentCar] = useState(null);
   const id = params.id;
-  console.log(id)
+
 
   useEffect(() => {
     async function loadCar() {
@@ -43,11 +43,11 @@ export default function CardIdPage({ params }) {
               <div className="flex flex-col gap-2 my-5">
                 <small className="text-sm">Precio contado</small>
                 <b className="text-2xl"> ${currentCar.precio.toLocaleString("es-AR")}</b>
-                <small> ${parseInt(currentCar.anticipo.toLocaleString("es-AR"))}</small>
+                <small className="text-sm">Precio contado</small>
+                <small> ${currentCar.anticipo}</small>
                 <div className="flex flex-col text-lg gap-2 my-5">
                 <p>Año: {currentCar.anio}</p>
                 <p>Kilometraje: {currentCar.km}</p>
-                <p>Combustible: {currentCar.combustible}</p>
                 </div>
               </div>
             <Link onClick={handleClick} className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href={`/financing`}>Consultar financiamiento</Link>
@@ -56,26 +56,25 @@ export default function CardIdPage({ params }) {
         <section className="md:w-full px-10 mt-10">
             <div>
             <h3 className="font-bold text-2xl mb-7">Especificaciones</h3>
-            {/* Logo */}
             </div>
             <div className="flex justify-between flex-col md:flex-row md:items-center items-start text-lg gap-10">
                 <ul>
-                    <li>Motor:</li>
-                    <li>Transmisión:</li>
-                    <li>Puertas:</li>
-                    <li>Traccion:</li>
+                    <li>Motor: {currentCar.motor}</li>
+                    <li>Transmisión: {currentCar.transmision}</li>
+                    <li>Puertas: {currentCar.puertas}</li>
+                    <li>Combustible: {currentCar.combustible}</li>
                 </ul>
                 <ul>
-                    <li>Litros:</li>
-                    <li>Direccion hidraulica:</li>
-                    <li>Sensor de estacionamiento:</li>
-                    <li>Aire Acondicionado:</li>
+                    <li>Carroceria: {currentCar.carroceria}</li>
+                    <li>Direccion hidraulica: {currentCar.hidraulica ===  1 ? "Si" : "No"}</li>
+                    <li>Sensor de estacionamiento: {currentCar.sensor === 1 ? "Si" : "No"}</li>
+                    <li>Aire Acondicionado: {currentCar.aire_acondicionado === 1 ? "Si" : "No"}</li>
                 </ul>
                 <ul>
-                    <li>Tipo Frenos ABS:</li>
-                    <li>Bolsas de Aire Frontales:</li>
-                    <li>Acepta permuta:</li>
-                    <li>Traccion: </li>
+                    <li>Tipo Frenos ABS: {currentCar.frenos === 1 ? "Si" : "No"}</li>
+                    <li>Bolsas de Aire Frontales: {currentCar.airbag === 1 ?"Si" : "No"}</li>
+                    <li>Acepta permuta: {currentCar.permuta === 1 ?"Si" : "No"}</li>
+                    <li>Estereo con pantalla: {currentCar.estereo_pantalla === 1 ?"Si" : "No"}</li>
                 </ul>
             </div>
         </section>
