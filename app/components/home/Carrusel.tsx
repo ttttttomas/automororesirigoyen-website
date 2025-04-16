@@ -2,19 +2,19 @@
 import { useState } from "react";
 
 const images = [
-  "/bg-home.jpeg",
-  "/bg-home2.jpeg",
-  "/bg-home3.jpeg"
+  "/bg-home.JPG",
+  "/bg-home2.JPG",
+  "/bg-home3.JPG"
 ];
 
 export default function Carrusel() {
   const [current, setCurrent] = useState(0)
 
-  // const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
 
-  // setTimeout(() => {
-  //   nextSlide()
-  // }, 3000);  
+  setTimeout(() => {
+    nextSlide()
+  }, 3000);  
 
   return (
     <section className="relative w-[90%] md:h-[700px] mx-auto">

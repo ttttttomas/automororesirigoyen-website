@@ -3,6 +3,7 @@ import { useState, useRef, useContext, useEffect } from "react";
 import { CarsContext } from "@/app/context/CarsContext";
 import { useCarForm } from "@/app/context/FormContext";
 import Loading from "../Loading";
+import Link from "next/link";
 
 
 export default function Form() {
@@ -17,7 +18,6 @@ export default function Form() {
 
   useEffect(() => {
     setLoading(false)
-    // setCarFromForm(null)
 
     if(!carFromForm) {
       const loadCars = async () => {
@@ -60,7 +60,7 @@ export default function Form() {
           marca_car: marca,
           modelo_car: modelo
         }
-        // formFinancing(newForm);
+        formFinancing(newForm);
         if (formFinancing) {
           console.log('Formulario enviado:', newForm);
         }
@@ -90,10 +90,13 @@ export default function Form() {
         <div className="rounded-xl flex items-center h-96 justify-between bg-white text-black w-full">
         <ul className="overflow-scroll w-full max-h-96">
           {cars.map((car) => (
-            <div key={car.ID} className="flex items-center justify-center gap-2 rounded-xl p-4 hover:bg-gray-200 transition-all duration-300">
-              <img src={car.imagen1} className='w-12' alt={'Auto ' + car.marca + ' ' + car.modelo} />
-              <p>{car.marca} {car.modelo}</p>
-            </div>
+            <Link href={`/cars/${car.ID}`} key={car.ID} className="flex items-center justify-between gap-2 rounded-xl p-4 hover:bg-gray-200 transition-all duration-300">
+              <img src={car.imagen1} className='size-32 object-contain' alt={'Auto ' + car.marca + ' ' + car.modelo} />
+              <div className="flex flex-col mx-auto">
+              <p className="font-medium text-lg">{car.marca} {car.modelo}</p>
+              <p className="font-medium text-center text-lg">{car.anio}</p>
+              </div>
+            </Link>
           ))}
         </ul>
       </div>}

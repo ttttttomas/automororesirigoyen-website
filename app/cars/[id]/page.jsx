@@ -43,7 +43,7 @@ export default function CardIdPage({ params }) {
               <div className="flex flex-col gap-2 my-5">
                 <small className="text-sm">Precio contado</small>
                 <b className="text-2xl"> ${currentCar.precio.toLocaleString("es-AR")}</b>
-                <small className="text-sm">Precio contado</small>
+                <small className="text-sm">Anticipo</small>
                 <small> ${currentCar.anticipo}</small>
                 <div className="flex flex-col text-lg gap-2 my-5">
                 <p>Año: {currentCar.anio}</p>

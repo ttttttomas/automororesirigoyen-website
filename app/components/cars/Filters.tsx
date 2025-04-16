@@ -1,7 +1,6 @@
 "use client";
 import { useContext, useEffect, useState, useId } from "react";
 
-
 import Arrow1 from "./Arroz1";
 import Arrow2 from "./Arrow2";
 import { FiltersContext } from "@/app/context/FiltersContext";
@@ -9,12 +8,11 @@ import { CarsContext } from "@/app/context/CarsContext";
 import Products from "./Products";
 import Loading from "../Loading";
 
-
 const images = [
   { id: "1", src: "/logo-chevrolet.png", alt: "Chevrolet" },
   { id: "2", src: "./logoblack.png", alt: "all" },
   { id: "4", src: "./Logo-ford.png", alt: "Ford" },
-  {id: "11", src: "/logo-fiat.png", alt:"Fiat"},
+  { id: "11", src: "/logo-fiat.png", alt:"Fiat"},
   { id: "6", src: "./logo-peugeot.png", alt: "Peugeot" },
   { id: "8", src: "./citroen.png", alt: "Citroen" },
   { id: "7", src: "./logo-renault.png", alt: "Renault" },
@@ -22,7 +20,7 @@ const images = [
   { id: "3", src: "./logo-volks.png", alt: "Volkswagen" },
   { id: "5", src: "./Logo-honda.png", alt: "Honda" },
   { id: "10", src: "./logo-nissan.png", alt: "Nissan" },
-  {id: "12", src: "/logo-hyundai.png", alt:"Hyundai"},
+  { id: "12", src: "/logo-hyundai.png", alt:"Hyundai"},
 
 ];
 
@@ -151,8 +149,8 @@ useEffect(() => {
 
           <p className="font-bold">Año</p>
           <div className="flex gap-5 flex-col md:flex-row mx-auto justify-between">
-            <input value={filters.minAño} name="minAño" onChange={handleChangeFilters} placeholder="Año minimo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
-            <input value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
+            <input max={2025} min={2011} value={filters.minAño} name="minAño" onChange={handleChangeFilters} placeholder="Año minimo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
+            <input min={2011} max={2025} value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
           </div>
 
           <p className="font-bold">Combustible</p>

@@ -23,15 +23,17 @@ export default function CarruselImg({ product }) {
   return (
     <div className="flex flex-col w-full md:w-[700px] justify-between md:justify-center items-center">
       <div className="flex w-full px-5 items-center justify-between">
-        <button onClick={prevSlide}>
+        <button className="bg-gray-200 p-2 rounded-xl" onClick={prevSlide}>
           <Arroz1 />
         </button>
-        <img
-          className="w-[180px] md:w-[400px]"
-          src={images[index]}
-          alt={`Imagen ${index}`}
-        />
-        <button onClick={nextSlide}>
+        <div className="w-[180px] flex items-center justify-center md:w-[400px]">
+            <img
+            className="object-contain"
+            src={images[index]}
+            alt={`Imagen ${index}`}
+            />
+          </div>
+        <button className="bg-gray-200 p-2 rounded-xl" onClick={nextSlide}>
           <Arrow2 />
         </button>
       </div>
@@ -41,25 +43,25 @@ export default function CarruselImg({ product }) {
           <img
             onClick={() => handleSelect(0)}
             src={images[0]}
-            className="md:w-20 w-16 opacity-50 transition-all duration-300"
+            className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
           {/* Left */}
           <img
             onClick={() => handleSelect(1)}
             src={images[1]}
-            className="md:w-20 w-16 opacity-50 transition-all duration-300"
+            className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
           {/* Center (Main) */}
           <img
             onClick={() => handleSelect(2)}
             src={images[2]}
-            className="md:w-20 w-16 opacity-50 transition-all duration-300"
+            className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
           {/* Right */}
           <img
             onClick={() => handleSelect(3)}
             src={images[3]}
-            className="md:w-20 w-16 opacity-50 transition-all duration-300"
+            className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
         </div>
       </div>
