@@ -2,7 +2,6 @@ import {useContext, useState, useEffect} from 'react'
 import Link from 'next/link'
 import { CarsContext } from '../context/CarsContext'
 import Loading from './Loading'
-import { div } from 'framer-motion/client'
 
 type Car = {
     ID: number,
