@@ -44,10 +44,10 @@ export default function CardIdPage({ params }) {
                 <small className="text-sm">Precio contado</small>
                 <b className="text-2xl"> ${currentCar.precio.toLocaleString("es-AR")}</b>
                 <small className="text-sm">Anticipo</small>
-                <small> ${currentCar.anticipo}</small>
+                <small> ${currentCar.anticipo.toLocaleString("es-AR")}</small>
                 <div className="flex flex-col text-lg gap-2 my-5">
                 <p>Año: {currentCar.anio}</p>
-                <p>Kilometraje: {currentCar.km}</p>
+                <p>Kilometraje: {currentCar.km.toLocaleString("es-AR")}</p>
                 </div>
               </div>
             <Link onClick={handleClick} className="bg-red-500 text-white font-bold px-10 text-center py-2 cursor-pointer rounded-xl mx-auto w-full" href={`/financing`}>Consultar financiamiento</Link>

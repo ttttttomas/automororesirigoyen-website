@@ -103,7 +103,6 @@ useEffect(() => {
   return (
     <section className="p-4 flex items-start md:w-full flex-col md:flex-row h-full bg-white justify-between relative">
       <div className="flex flex-col items-center justify-center relative md:w-[400px] w-full">
-        
         <div className="mx-4 flex items-center justify-center">
           <button
             onClick={prevSlide}

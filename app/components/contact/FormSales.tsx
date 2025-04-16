@@ -14,6 +14,32 @@ const CotizaAutoForm = () => {
     imagen: '',
     detalles: ''
   });
+  const [image, setImage] = useState('');
+
+  const handleFileChange = async (e) => {
+    const imageFile = e.target.files[0];
+    const url = `https://api.imgbb.com/1/upload?key=d442578007c809df9db2bc11bd9acff7&image=${imageFile.name}`;
+    const data = new FormData();
+    
+    data.append("image", imageFile);
+    console.log(data);
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: data,
+      });
+      const responseData = await response.json();
+      setImage(responseData.data.url);
+      setFormData(prev => ({
+        ...prev,
+        imagen: responseData.data.url
+      }));
+      console.log(responseData.data.url);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -106,12 +132,23 @@ const CotizaAutoForm = () => {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Imagen</label>
               <input
-                type='file'
-                name="imagen"
-                value={formData.imagen}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+              className='text-white border p-2 rounded-lg'
+              onChange={handleFileChange}
+              type="file"
+            />
+            {image ? (
+                <img
+                  className="rounded-2xl mt-5 h-[450px] mx-auto"
+                  src={image}
+                  alt="Vista previa de la imagen"
+                />
+            ) :
+            <img
+                  className="rounded-2xl mt-5 h-[450px] mx-auto"
+                  src="/default-form.png"
+                  alt="Vista previa de la imagen"
+                />
+            }
             </div>
             
             
@@ -123,7 +160,7 @@ const CotizaAutoForm = () => {
                 value={formData.nombre_apellido}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ej: Germán visintainer"
+                placeholder="Nombre y apellido"
               />
             </div>
             

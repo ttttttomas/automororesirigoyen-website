@@ -63,6 +63,7 @@ export default function Form() {
         formFinancing(newForm);
         if (formFinancing) {
           console.log('Formulario enviado:', newForm);
+          alert('Formulario enviado!')
         }
       };
   return (
@@ -107,7 +108,7 @@ export default function Form() {
               type="text"
               name="nombre_apellido"
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Nombre y apellido"
             />
           </div>
@@ -118,7 +119,7 @@ export default function Form() {
               name="telefono"
               value={formData.telefono}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Telefono"
             />
           </div>
@@ -130,7 +131,7 @@ export default function Form() {
               name="mail"
               value={formData.mail}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Ej: Direccionfalsa123@gmail.com"
             />
           </div>
@@ -142,7 +143,7 @@ export default function Form() {
               name="cuit"
               value={formData.cuit}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="CUIT"
             />
           </div>
@@ -154,7 +155,7 @@ export default function Form() {
               name="estado_civil"
               value={formData.estado_civil}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Estado civil"
             />
           </div>
@@ -166,7 +167,7 @@ export default function Form() {
               name="estado_tributario"
               value={formData.estado_tributario}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Estado tributario"
             />
           </div>

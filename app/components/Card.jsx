@@ -14,7 +14,7 @@ export default function Card({car}) {
                 </div>
                 <div className="flex justify-between mx-2 items-center">
                     <ul className='w-1/2 font-semibold'>
-                        <li className="md:text-md text-xs">{car.km} Kilometros</li>
+                        <li className="md:text-md text-xs">{car.km.toLocaleString("es-AR")} Kilometros</li>
                         <li className="md:text-md text-xs">{car.anio}</li>
                         <li className="md:text-md text-xs">{car.combustible}</li>
                         <li className='font-extrabold'>${car.precio.toLocaleString("es-AR")}</li>
