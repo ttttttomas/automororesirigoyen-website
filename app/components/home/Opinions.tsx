@@ -42,11 +42,11 @@ export default function Opinions() {
           Algunas de nuestras reseñas
         </h2>
         
-        <div className="flex gap-8 overflow-x-scroll">
+        <div className="flex gap-8 flex-col xl:flex-row overflow-x-scroll">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="bg-white min-w-[500px] flex flex-col justify-between p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white w-full md:min-w-[500px] flex flex-col justify-between p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="mb-6 flex items-start justify-center gap-5">
                 <Star color={'#CE0000'}/>
