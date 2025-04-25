@@ -33,6 +33,8 @@ export default function ProductsFilters() {
   const [minKm, setMinKm] = useState(200000);
   const [minPrice, setMinPrice] = useState(0);
   
+  console.log(minKm)
+
   const minKmId = useId();
   const minPriceId = useId(); 
 
