@@ -2,9 +2,9 @@
 import { useState } from "react";
 
 const images = [
-  "/bg-home.JPG",
-  "/bg-home2.JPG",
-  "/bg-home3.JPG"
+  "/bg-home.webp",
+  "/bg-home2.webp",
+  "/bg-home3.webp"
 ];
 
 export default function Carrusel() {
