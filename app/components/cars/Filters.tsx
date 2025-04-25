@@ -41,7 +41,6 @@ export default function ProductsFilters() {
 useEffect(() => {
   const loadCars = async () => {
     const response = await getCars();
-    console.log(response);
     setCars(response);
     setLoading(false)
   };
@@ -50,8 +49,6 @@ useEffect(() => {
 
   useEffect(() => {
   handleCategoryChange(images[currentIndex].alt);
-  console.log(filteredCars)
-  console.log(images[currentIndex].alt)
 }, [currentIndex]);
 
   const handleChangeMinKm = (e) => {

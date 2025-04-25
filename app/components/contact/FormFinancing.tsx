@@ -14,7 +14,6 @@ export default function Form() {
   const priceCarRef = useRef(null);
   const marcaCarRef = useRef(null);
   const modeloCarRef = useRef(null);
-  console.log(carFromForm)
 
   useEffect(() => {
     setLoading(false)
@@ -22,7 +21,6 @@ export default function Form() {
     if(!carFromForm) {
       const loadCars = async () => {
         const response = await getCars();
-        console.log(response);
         setCars(response);
       };
       loadCars();
@@ -62,7 +60,6 @@ export default function Form() {
         }
         formFinancing(newForm);
         if (formFinancing) {
-          console.log('Formulario enviado:', newForm);
           alert('Formulario enviado!')
         }
       };

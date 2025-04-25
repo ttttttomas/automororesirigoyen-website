@@ -9,7 +9,7 @@ import { useCarForm } from "@/app/context/FormContext";
 
 export default function CardIdPage({ params }) {
 
-  const { setCarFromForm, carFromForm } = useCarForm()
+  const { setCarFromForm } = useCarForm()
 
   const {getCarbyId} = useContext(CarsContext);
 
@@ -29,7 +29,6 @@ export default function CardIdPage({ params }) {
 
   const handleClick = () => {
     setCarFromForm(currentCar)
-    console.log(carFromForm + 'Producto agregado al contexto')
   }
 
   return (

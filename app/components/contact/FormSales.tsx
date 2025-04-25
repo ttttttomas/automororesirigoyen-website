@@ -22,7 +22,6 @@ const CotizaAutoForm = () => {
     const data = new FormData();
     
     data.append("image", imageFile);
-    console.log(data);
 
     try {
       const response = await fetch(url, {
@@ -35,7 +34,6 @@ const CotizaAutoForm = () => {
         ...prev,
         imagen: responseData.data.url
       }));
-      console.log(responseData.data.url);
     } catch (error) {
       console.error(error);
     }
