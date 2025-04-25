@@ -28,6 +28,7 @@ export default function CarruselImg({ product }) {
         </button>
         <div className="w-[180px] flex items-center justify-center md:w-[400px]">
             <img
+            loading="lazy"
             className="object-contain"
             src={images[index]}
             alt={`Imagen ${index}`}
@@ -41,24 +42,28 @@ export default function CarruselImg({ product }) {
       <div className="flex justify-center items-center">
         <div className="md:flex grid grid-cols-2 my-10 items-center gap-6">
           <img
+          loading="lazy"
             onClick={() => handleSelect(0)}
             src={images[0]}
             className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
           {/* Left */}
           <img
+          loading="lazy"
             onClick={() => handleSelect(1)}
             src={images[1]}
             className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
           {/* Center (Main) */}
           <img
+          loading="lazy"
             onClick={() => handleSelect(2)}
             src={images[2]}
             className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"
           />
           {/* Right */}
           <img
+          loading="lazy"
             onClick={() => handleSelect(3)}
             src={images[3]}
             className="md:w-20 hover:opacity-100 cursor-pointer w-16 opacity-50 transition-all duration-300"

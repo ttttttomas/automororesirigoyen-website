@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col bg-black text-white px-10 pt-10 pb-18 md:pb-0 mt-10">
         <section className="flex flex-col xl:flex-row items-center md:justify-between">
-            <img width={300} src="/logowhite.png"/>
+            <img loading="lazy" width={300} src="/logowhite.png"/>
             <div className="flex gap-3 items-center flex-col md:w-52 my-5">
                 <p className="font-bold text-3xl mb-5">Contacto</p>
                 <ul className="flex text-xs md:text-sm font-medium flex-col gap-4">

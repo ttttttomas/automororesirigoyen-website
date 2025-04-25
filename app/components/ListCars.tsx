@@ -54,7 +54,7 @@ export default function ListCars({onChange}) {
           <ul className='flex flex-col justify-between items-center md:items-start w-full gap-2 h-40 overflow-y-scroll'>
             {filteredCars.map((car: Car) => (
               <Link key={car.ID} href={`/cars/${car.ID}`} onClick={redirectCar} className='flex items-center justify-around gap-2'>
-              <img src={car.imagen1} className='w-18 pl-2' alt="logo toyota" />
+              <img src={car.imagen1} loading="lazy" className='w-18 pl-2' alt="logo toyota" />
               <div className='flex flex-col pl-10'>
                 <div className='flex flex-col md:flex-row items-center gap-1'>
                   <p className='font-semibold text-xs md:text-lg'>{car.marca}</p>

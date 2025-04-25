@@ -30,7 +30,7 @@ export default function ProductsFilters() {
   const {filters, filterProducts, setFilters} = useContext(FiltersContext);
 
   const [currentIndex, setCurrentIndex] = useState(1);
-  const [minKm, setMinKm] = useState(0);
+  const [minKm, setMinKm] = useState(200000);
   const [minPrice, setMinPrice] = useState(0);
   
   const minKmId = useId();
@@ -93,8 +93,8 @@ useEffect(() => {
       minAño: 2010,
       maxAño: 2025,
       combustible: 'all',
-      minKm: 0, 
-      minPrice: 9000000,
+      minKm: 200000, 
+      minPrice: 40000000,
     })
     setCurrentIndex(1);
   }
@@ -123,9 +123,10 @@ useEffect(() => {
                   key={index}
                   className={`transition-transform duration-500 ease-in-out flex justify-center items-center ${position}`}>
                   <img
+                    loading="lazy"
                     src={image.src}
                     alt={image.alt}
-                    className="md:min-w-10 md:max-w-24 max-w-14 min-w-8"
+                    className="md:min-w-10 md:max-w-24 max-w-18 min-w-8"
                   />
                 </div>
               );
@@ -147,9 +148,13 @@ useEffect(() => {
           </select>
 
           <p className="font-bold">Año</p>
-          <div className="flex gap-5 flex-col md:flex-row mx-auto justify-between">
+          <div className="flex justify-between w-full">
+          <p>Desde</p>
+          <p>Hasta</p>
+          </div>
+          <div className="flex w-full gap-5 md:flex-row justify-between">
             <input max={2025} min={2011} value={filters.minAño} name="minAño" onChange={handleChangeFilters} placeholder="Año minimo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
-            <input min={2011} max={2025} value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
+            <input min={2011} max={2025} value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full text-end px-1 text-sm py-1 border-gray-500 border" type="number" />
           </div>
 
           <p className="font-bold">Combustible</p>
@@ -162,12 +167,12 @@ useEffect(() => {
 
           <p className="font-bold">Kilometraje</p>
           <div className="flex gap-2">
-            <p className="flex ">Minimo:</p>
+            <p className="flex ">Maximo:</p>
             <input
-              value={minKm}
+              value={filters.minKm}
               id={minKmId}
               min='0'
-              max='130000'
+              max='200000'
               name='minKm' 
               onChange={(handleChangeMinKm)}
               className="w-1/2 border-black/30 border px-2 rounded-md"
@@ -177,13 +182,13 @@ useEffect(() => {
            {filters.minKm}Km
           </div>
           <p className="font-bold">Precio</p>
-          <div className="flex justify-between gap-2">
-          <p className="flex ">Minimo:</p>
+          <div className="flex justify-between text-nowrap gap-2">
+          <p className="flex ">Maximo:</p>
               <input
               value={filters.minPrice}
               id={minPriceId}
               min='9000000'
-              max='16800000'
+              max='40000000'
               name='minPrice'
               onChange={(handleChangeMinPrice)}
               className="w-1/2 border-black/30 border px-2 rounded-md"

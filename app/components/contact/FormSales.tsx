@@ -51,8 +51,10 @@ const CotizaAutoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Formulario enviado:', formData);
     formSellCar(formData);
+    if(formSellCar.status === 500){
+      alert("Error al enviar formulario")
+    }
   };
 
   return (
@@ -118,14 +120,14 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-white mb-1">Detalles</label>
+              <label className="block text-sm font-medium text-white mb-1">Valor pretendido por tu auto</label>
               <textarea
                 name="detalles"
                 value={formData.detalles}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Ej: Quiero cambiar o vender mi auto"
-                rows= {3}
+                placeholder="$$"
+                rows= {1}
               />
             </div>
 
@@ -138,13 +140,15 @@ const CotizaAutoForm = () => {
             />
             {image ? (
                 <img
+                  loading="lazy"
                   className="rounded-2xl mt-5 h-[450px] mx-auto"
                   src={image}
                   alt="Vista previa de la imagen"
                 />
             ) :
             <img
-                  className="rounded-2xl mt-5 h-[450px] mx-auto"
+                  loading="lazy"
+                  className="rounded-2xl mt-5 md:h-[450px] mx-auto"
                   src="/default-form.png"
                   alt="Vista previa de la imagen"
                 />

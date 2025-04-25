@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className='z-10 fixed w-full flex justify-around md:justify-between px-10 backdrop-blur-sm'>
       <Link href="/">
-        <img width={80} src='/logoblack.png' />
+        <img loading="lazy" width={80} src='/logoblack.png' />
       </Link>
       <div className='flex items-center gap-8'>
         <ul className='md:flex hidden items-center gap-8 text-black font-bold'>

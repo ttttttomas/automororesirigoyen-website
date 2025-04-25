@@ -19,6 +19,7 @@ export default function Carrusel() {
   return (
     <section className="relative w-[90%] md:h-[700px] mx-auto">
         <img
+          loading="lazy"
           src={images[current]}
           alt={`Imagen ${current}`}
           className="w-full h-[400px] md:h-full object-cover rounded-2xl"

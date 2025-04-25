@@ -11,8 +11,8 @@ export const FiltersProvider = ({ children }) => {
     minAño: 2010,
     maxAño: 2025,
     combustible: 'all',
-    minKm: 0,
-    minPrice: 0,
+    minKm: 200000,
+    minPrice: 40000000,
   });
 
   const filterProducts = (products) => {
@@ -23,8 +23,8 @@ export const FiltersProvider = ({ children }) => {
         (!filters.minAño || product.anio >= parseInt(filters.minAño)) &&
         (!filters.maxAño || product.anio <= parseInt(filters.maxAño)) &&
         (filters.combustible === 'all' || product.combustible === filters.combustible) &&
-        (!filters.minKm || product.km >= filters.minKm) &&
-        (!filters.minPrice || product.precio >= filters.minPrice)
+        (!filters.minKm || product.km <= filters.minKm) &&
+        (!filters.minPrice || product.precio <= filters.minPrice)
       );
     });
   };

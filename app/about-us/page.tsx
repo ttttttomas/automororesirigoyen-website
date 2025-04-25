@@ -14,7 +14,7 @@ export default function AboutsUsPage() {
                 <p className="text-center w-full md:text-lg px-10 md:px-0">Automotores Yrigoyen es una concesionaria de vehículos ubicada en Avellaneda, Provincia de Buenos Aires. Fundada en 2019 por tres amigos, la empresa se especializa en la compra y venta de autos usados seleccionados y vehículos 0 km. Con una calificación de 4.9/5 estrellas basada en más de 230 reseñas, nos comprometemos a ofrecer vehículos en excelentes condiciones, garantizando la satisfacción de nuestros clientes. Nuestro equipo se distingue por una atención personalizada y profesional, brindando confianza y seguridad en cada transacción.</p>     
             </div>
             <div className="w-full md:w-1/2">
-            <img className="mx-auto md:max-h-[500px] w-full md:w-[500px] object-cover px-10 rounded-2xl" src="/img-aboutus.JPG" alt="about us" />
+            <img loading="lazy" className="mx-auto md:max-h-[500px] w-full md:w-[500px] object-cover px-10 rounded-2xl" src="/img-aboutus.JPG" alt="about us" />
             </div>
         </div>
         
@@ -27,7 +27,7 @@ export default function AboutsUsPage() {
                 </li>
                 <li className="flex flex-col gap-5 items-center justify-between font-bold">
                     <p>Te acompañamos en todo el proceso</p>
-                    <img src="/Why2.png" width={90} height={110} alt="why2" />
+                    <img loading="lazy" src="/Why2.png" width={90} height={110} alt="why2" />
                 </li>
                 <li className="flex flex-col gap-5 items-center justify-between font-bold">
                     <p className="text-red-500">Entrega inmediata</p>
