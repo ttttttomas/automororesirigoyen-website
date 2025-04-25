@@ -147,7 +147,7 @@ const CotizaAutoForm = () => {
             <img
                   loading="lazy"
                   className="rounded-2xl mt-5 md:h-[450px] mx-auto"
-                  src="/default-form.png"
+                  src="/default-form.jpg"
                   alt="Vista previa de la imagen"
                 />
             }
