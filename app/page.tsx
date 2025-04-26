@@ -3,7 +3,7 @@ import Compraventa from "./components/home/Compraventa";
 import OurCars from './components/home/OurCars'
 import CounterUpPage from "./components/home/Counter";
 import Wheel from './components/home/Wheel'
-import Process from './components/home/Process'
+// import Process from './components/home/Process'
 import Opinions from './components/home/Opinions'
 import Map from './components/home/Map'
 
