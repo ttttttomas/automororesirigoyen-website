@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Star from '../icons/Star'
 
 export default function Opinions() {
-    const testimonials = [
+    const opinions = [
       {
         id: 1,
         starts: 5,
@@ -33,7 +33,7 @@ export default function Opinions() {
         name: "Romina P",
         text: "Excelente experiencia. Trate con profesionales, me asesoraron y contestaron todas mis dudas. Fui porque vi que tienen buenas referencias. Recomendable 100%..",
       },
-    ];
+    ]
 
   return (
     <section className="py-16 bg-gray-50">
@@ -43,17 +43,18 @@ export default function Opinions() {
         </h2>
         
         <div className="flex gap-8 flex-col xl:flex-row overflow-x-scroll">
-          {testimonials.map((testimonial) => (
+          {opinions.map((opinion) => (
             <div 
-              key={testimonial.id}
+              key={opinion.id}
               className="bg-white w-full md:min-w-[500px] flex flex-col justify-between p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="mb-6 flex items-start justify-center gap-5">
-                <Star color={'#CE0000'}/>
-                <p>5</p>
+              {[...Array(opinion.starts)].map((_, i) => (<Star key={i} color={'#CE0000'}/>))}
+          
+      
               </div>
-              <p className="text-gray-600 mb-6">{testimonial.text}</p>
-              <p className="font-bold text-gray-800">{testimonial.name}</p>
+              <p className="text-gray-600 mb-6">{opinion.text}</p>
+              <p className="font-bold text-gray-800">{opinion.name}</p>
             </div>
           ))}
         </div>

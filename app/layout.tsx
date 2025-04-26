@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   icons:{
     icon:"/favicon.ico"
   },
-  keywords: ["concesionaria de autos", "autos nuevos y usados", "compra de autos en buenos aires", "financiamiento de autos", "autos en venta hoy", "mejores autos 2025", "venta de autos usados certificados", "promociones autos nuevos", "prestamo prendario concesionaria", "automotores yrigoyen", "concesionaria automotores yrigoyen", "concesionaria de autos yrigoyen", "auto yrigoyen", "autos yrigoyen", "automotores yrigoyen", "auto", "autos", "venta de auto", "compra de auto", "financiamiento de auto", "mejores auto", "mejores autos", "nuevos auto", "nuevos autos", "usados auto", "usados autos", "venta de autos", "promociones de auto", "prestamo prendario", "prestamo prendario concesionario", "prestamo prendario concesionaria", "prestamo prendario de auto", "prestamo prendario de autos"],
+  keywords: ["concesionaria de autos","Vender auto usado", "autos nuevos y usados", "compra de autos en buenos aires", "financiamiento de autos", "autos en venta hoy", "mejores autos 2025", "venta de autos usados certificados", "promociones autos nuevos", "prestamo prendario concesionaria", "automotores yrigoyen", "concesionaria automotores yrigoyen", "concesionaria de autos yrigoyen", "auto yrigoyen", "autos yrigoyen", "automotores yrigoyen", "auto", "autos", "venta de auto", "compra de auto", "financiamiento de auto", "mejores auto", "mejores autos", "nuevos auto", "nuevos autos", "usados auto", "usados autos", "venta de autos", "promociones de auto", "prestamo prendario", "prestamo prendario concesionario", "prestamo prendario concesionaria", "prestamo prendario de auto", "prestamo prendario de autos"],
 };
 
 export default function RootLayout({
