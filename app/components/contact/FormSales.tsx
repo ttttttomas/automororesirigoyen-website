@@ -1,8 +1,11 @@
 'use client'
 import { useContext, useState } from 'react';
 import { CarsContext } from '@/app/context/CarsContext';
+import {toast, Toaster} from 'sonner'
+import { useRouter } from 'next/navigation';
 
 const CotizaAutoForm = () => {
+  const router = useRouter();
   const {formSellCar} = useContext(CarsContext);
   const [formData, setFormData] = useState({
     year_model: '',
@@ -12,7 +15,7 @@ const CotizaAutoForm = () => {
     mail: '',
     telefono: '',
     imagen: '',
-    detalles: ''
+    valor_pretendido: ''
   });
   const [image, setImage] = useState('');
 
@@ -49,10 +52,12 @@ const CotizaAutoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData)
     formSellCar(formData);
-    if(formSellCar.status === 500){
-      alert("Error al enviar formulario")
-    }
+    toast.success("Formulario enviado con éxito")
+    setTimeout(() => {
+      router.push('/')
+    }, 2000)
   };
 
   return (
@@ -62,6 +67,7 @@ const CotizaAutoForm = () => {
            backgroundSize: 'cover',
            backgroundPosition: 'center'
          }}>
+        <Toaster richColors={true} position="top-center" />
       {/* Contenedor del formulario con fondo negro semitransparente */}
       <div className="md:w-[700px] w-full bg-opacity-70 bg-black/40 backdrop-blur-xl rounded-xl p-8 shadow-2xl">
         <h1 className="text-3xl font-bold text-center mb-6 text-white">Cotiza tu auto</h1>
@@ -118,14 +124,14 @@ const CotizaAutoForm = () => {
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
-              <label className="block text-sm font-medium text-white mb-1">Valor pretendido por tu auto</label>
+              <label className="block text-sm font-medium text-white mb-1">Detalles y valor pretendido por tu auto</label>
               <textarea
-                name="detalles"
-                value={formData.detalles}
+                name="valor_pretendido"
+                value={formData.valor_pretendido}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="$$"
-                rows= {1}
+                rows= {3}
               />
             </div>
 

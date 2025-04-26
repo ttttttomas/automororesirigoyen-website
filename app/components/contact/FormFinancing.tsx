@@ -4,9 +4,11 @@ import { CarsContext } from "@/app/context/CarsContext";
 import { useCarForm } from "@/app/context/FormContext";
 import Loading from "../Loading";
 import Link from "next/link";
-
+import { toast, Toaster } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function Form() {
+  const router = useRouter();
   const {carFromForm} = useCarForm()
   const {formFinancing, getCars} = useContext(CarsContext);
   const [loading, setLoading] = useState(true)
@@ -59,9 +61,11 @@ export default function Form() {
           modelo_car: modelo
         }
         formFinancing(newForm);
-        if (formFinancing) {
-          alert('Formulario enviado!')
-        }
+        console.log(newForm)
+        toast.success("Formulario enviado con éxito")
+        setTimeout(() => {
+          router.push('/')
+        }, 2000)
       };
   return (
     <section className="flex w-full text-white items-center py-5 justify-center" 
@@ -70,6 +74,7 @@ export default function Form() {
            backgroundSize: 'cover',
            backgroundPosition: 'center'
          }}>
+                    <Toaster position="top-center" richColors={true} />
       {/* Contenedor del formulario con fondo negro semitransparente */}
       <div className="md:w-[700px] w-full bg-opacity-70 bg-black/40 backdrop-blur-xl rounded-xl p-8 shadow-2xl">
         <h1 className="text-3xl font-bold text-start mb-6 text-white">Financiamiento de:</h1>
@@ -158,15 +163,16 @@ export default function Form() {
           </div>
 
           <div className='flex flex-col gap-2 mb-2'>
-            <label className="block text-sm font-medium text-white mb-1">Estado Tributario</label>
-            <input
-              type="text"
+            <label className="block text-sm font-medium text-white mb-1">Relacion laboral actual</label>
+            <select
               name="estado_tributario"
               value={formData.estado_tributario}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Estado tributario"
-            />
+            >
+              <option value="Empleado">Empleado/Relacion de dependencia</option>
+              <option value="Independiente">Independiente</option>
+            </select>
           </div>
           
         </div>

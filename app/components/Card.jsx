@@ -7,6 +7,7 @@ export default function Card({car}) {
                 <small className='px-5 text-md font-semibold'>{car.modelo}</small>
                 <div className="flex justify-center items-center">
                     <img
+                    loading="lazy"
                         className="h-64 w-80 my-5 object-cover"
                         src={car.imagen1}
                         alt={`Imagen ${car.marca} ${car.modelo}`}

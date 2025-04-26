@@ -20,7 +20,6 @@ export default function CardIdPage({ params }) {
   useEffect(() => {
     async function loadCar() {
       const response = await getCarbyId(id); // <-- tu función que trae el producto
-      console.log("🚗 Producto:", response);
       setCurrentCar(response);
     }
   

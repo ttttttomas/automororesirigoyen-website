@@ -14,9 +14,9 @@ export default function Home() {
     <main className="pt-20">
       <Carrusel />
       <CounterUpPage />
-      <Process />
-      <Wheel />
+      {/* <Process /> */}
       <OurCars />
+      <Wheel />
       <Compraventa />
       <Opinions />
       <Map width="100%" height="200px"/>
