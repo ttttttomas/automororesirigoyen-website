@@ -61,7 +61,7 @@ export default function Form() {
           modelo_car: modelo
         }
         formFinancing(newForm);
-        console.log(newForm)
+        // console.log(newForm)
         toast.success("Formulario enviado con éxito")
         setTimeout(() => {
           router.push('/')
@@ -170,6 +170,7 @@ export default function Form() {
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white text-black bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
+              <option value="">Elegir una opción</option>
               <option value="Empleado">Empleado/Relacion de dependencia</option>
               <option value="Independiente">Independiente</option>
             </select>
