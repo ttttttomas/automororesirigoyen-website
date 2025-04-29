@@ -7,7 +7,7 @@ export const CarsContext = createContext()
 
 export const CarsProvider = ({ children }) => {
 
-  const baseURL = 'https://backend-automotoresy-production.up.railway.app'
+  const baseURL = 'https://automotoresyrigoyen.com/api'
   const [cars, setCars] = useState([])
 
   const getCars = async () => {
