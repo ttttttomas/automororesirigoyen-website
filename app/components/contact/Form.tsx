@@ -41,6 +41,7 @@ export default function Form() {
             <div className='flex flex-col gap-2'>
               <label className="block text-sm font-medium text-white mb-1">Nombre y apellido</label>
               <input
+                required={true}
                 type="text"
                 name="modeloYear"
                 value={formData.modeloYear}
@@ -53,6 +54,7 @@ export default function Form() {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Mail</label>
               <input
+                required={true}
                 type="email"
                 name="email"
                 value={formData.email}
@@ -65,6 +67,7 @@ export default function Form() {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Telefono</label>
               <input
+                  required={true}
                 type="text"
                 name="marca"
                 value={formData.marca}
@@ -77,6 +80,7 @@ export default function Form() {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Motivo</label>
               <input
+              required={true}
                 type="text"
                 name="marca"
                 value={formData.marca}
@@ -89,6 +93,7 @@ export default function Form() {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Breve descripción</label>
               <textarea
+                required={true}
                 name="detalles"
                 value={formData.detalles}
                 onChange={handleChange}

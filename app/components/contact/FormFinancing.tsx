@@ -107,6 +107,7 @@ export default function Form() {
           <div className='flex flex-col my-2 gap-2'>
             <label className="block text-sm font-medium text-white mb-1">Nombre y apellido</label>
             <input
+            required={true}
               type="text"
               name="nombre_apellido"
               onChange={handleChange}
@@ -117,6 +118,7 @@ export default function Form() {
           <div className='flex flex-col my-2 gap-2'>
             <label className="block text-sm font-medium text-white mb-1">Telefono</label>
             <input
+            required={true}
               type="text"
               name="telefono"
               value={formData.telefono}
@@ -129,6 +131,7 @@ export default function Form() {
           <div className='flex flex-col gap-2 my-2'>
             <label className="block text-sm font-medium text-white mb-1">Mail</label>
             <input
+            required={true}
               type="email"
               name="mail"
               value={formData.mail}
@@ -141,6 +144,7 @@ export default function Form() {
           <div className='flex flex-col gap-2 mb-2'>
             <label className="block text-sm font-medium text-white mb-1">Cuit</label>
             <input
+            required={true}
               type="text"
               name="cuit"
               value={formData.cuit}
@@ -153,6 +157,7 @@ export default function Form() {
           <div className='flex flex-col gap-2 mb-2'>
             <label className="block text-sm font-medium text-white mb-1">Estado civil</label>
             <input
+            required={true}
               type="text"
               name="estado_civil"
               value={formData.estado_civil}
@@ -165,6 +170,7 @@ export default function Form() {
           <div className='flex flex-col gap-2 mb-2'>
             <label className="block text-sm font-medium text-white mb-1">Relacion laboral actual</label>
             <select
+            required={true}
               name="estado_tributario"
               value={formData.estado_tributario}
               onChange={handleChange}
