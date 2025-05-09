@@ -34,12 +34,8 @@ export default function Footer() {
                 <p className="font-bold text-3xl mb-5">Horarios</p>
                 <ul className="flex font-medium flex-col gap-5">
                     <li>
-                        <p className="text-center text-red-500 font-bold">Lunes a Jueves</p>
-                        <p className="text-start">10:30hs a 19:00hs</p>
-                    </li>
-                    <li>
-                        <p className="text-center text-red-500 font-bold">Viernes</p>
-                        <p className="text-start">10:30hs a 17:00hs</p>
+                        <p className="text-center text-red-500 font-bold">Lunes a Viernes</p>
+                        <p className="text-start">10:30hs a 18:30hs</p>
                     </li>
                     <li>
                         <p className="text-center text-red-500 font-bold">Sabados</p>
