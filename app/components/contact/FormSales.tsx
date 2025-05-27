@@ -21,7 +21,7 @@ const CotizaAutoForm = () => {
 
   const handleFileChange = async (e) => {
     const imageFile = e.target.files[0];
-    const url = `https://api.imgbb.com/1/upload?key=d442578007c809df9db2bc11bd9acff7&image=${imageFile.name}`;
+    const url = `https://api.imgbb.com/1/upload?key=78fc3491c12f43d96a7bf6962ea25a71&image=${imageFile.name}`;
     const data = new FormData();
     
     data.append("image", imageFile);
@@ -31,7 +31,7 @@ const CotizaAutoForm = () => {
         method: "POST",
         body: data,
       });
-      const responseData = await response.json();
+      const responseData = await response.json();      
       setImage(responseData.data.url);
       setFormData(prev => ({
         ...prev,
