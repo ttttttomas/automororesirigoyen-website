@@ -77,19 +77,34 @@ const CotizaAutoForm = () => {
           <div className="text-black">
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Año del modelo</label>
-              <input
-                type="text"
+              <select
+                required={true}
                 name="year_model"
                 value={formData.year_model}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-white bg-opacity-50 border-gray-700 rounded-lg  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Año del modelo"
-              />
+              >
+                <option value="">Selecciona un año</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>  
+              </select>
             </div>
             
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Modelo</label>
               <input
+                required={true}
                 type="text"
                 name="modelo"
                 value={formData.modelo}
@@ -102,6 +117,7 @@ const CotizaAutoForm = () => {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Marca</label>
               <input
+                required={true}
                 type="text"
                 name="marca"
                 value={formData.marca}
@@ -114,6 +130,7 @@ const CotizaAutoForm = () => {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Mail</label>
               <input
+                required={true}
                 type="email"
                 name="mail"
                 value={formData.mail}
@@ -138,7 +155,8 @@ const CotizaAutoForm = () => {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Imagen</label>
               <input
-              className='text-white border p-2 rounded-lg'
+              required={true}
+              className='text-white border cursor-pointer p-2 rounded-lg'
               onChange={handleFileChange}
               type="file"
             />
@@ -163,6 +181,7 @@ const CotizaAutoForm = () => {
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Nombre y apellido</label>
               <input
+                required={true}
                 type="text"
                 name="nombre_apellido"
                 value={formData.nombre_apellido}
@@ -174,7 +193,8 @@ const CotizaAutoForm = () => {
             
             <div className='flex flex-col gap-2 mb-2'>
               <label className="block text-sm font-medium text-white mb-1">Teléfono</label>
-              <input
+              <input 
+                required={true}
                 type="tel"
                 name="telefono"
                 value={formData.telefono}
