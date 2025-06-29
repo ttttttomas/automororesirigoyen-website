@@ -21,7 +21,8 @@ export default function CarruselImg({ product }) {
   };
 
   return (
-    <div className="flex flex-col w-full md:w-[700px] justify-between md:justify-center items-center">
+    <section className="flex flex-col w-full relative md:w-[700px] justify-between md:justify-center items-center">
+      <p className="absolute h-8 w-1/2 bg-red-500 font-bold text-center text-2xl text-white top-0">RESERVADO</p>
       <div className="flex w-full px-5 items-center justify-between">
         <button className="bg-gray-200 p-2 rounded-xl" onClick={prevSlide}>
           <Arroz1 />
@@ -70,6 +71,6 @@ export default function CarruselImg({ product }) {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
