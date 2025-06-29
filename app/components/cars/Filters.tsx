@@ -201,6 +201,7 @@ useEffect(() => {
         <p className="text-white hidden">{minPrice}</p>
       </div>
         {loading ? <Loading /> : <Products products={filteredCars} />}
+        {/* <pre>{JSON.stringify(filteredCars, null, 2)}</pre> */}
     </section>
   );
 }
