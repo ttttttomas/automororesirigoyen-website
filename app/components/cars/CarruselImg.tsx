@@ -27,7 +27,7 @@ export default function CarruselImg({ product }) {
         <button className="bg-gray-200 p-2 rounded-xl" onClick={prevSlide}>
           <Arroz1 />
         </button>
-        <div className="w-[180px] flex items-center justify-center md:w-[400px]">
+        <div className="h-full w-full flex items-center justify-center md:w-[400px]">
             <img
             loading="lazy"
             className="object-contain"
