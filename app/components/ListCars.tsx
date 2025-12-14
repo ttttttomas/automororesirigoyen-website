@@ -40,8 +40,8 @@ export default function ListCars({onChange}) {
         onChange()
     }
 
-    console.log(filteredCars)
 
+    
   return (
     <section className='absolute bg-white shadow-lg z-50 shadow-black/40 text-red-500 top-17 w-full md:w-[400px] right-0'>
         <div className='flex flex-col justify-between items-center'>

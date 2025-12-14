@@ -15,7 +15,6 @@ export default function OurCars() {
     }
     loadCars()
   }, [])
-  console.log(cars);
   
   return (
     <section className='text-black flex flex-col'>

@@ -12,9 +12,9 @@
     "axios": "^1.8.4",
     "framer-motion": "^12.6.3",
     "next": "16.0.10",
-    "react": "19.2.7",
+    "react": "19.2.3",
     "react-countup": "^6.5.3",
-    "react-dom": "19.2.7",
+    "react-dom": "19.2.3",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "sonner": "^2.0.3"
@@ -22,15 +22,11 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.7",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "overrides": {
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.7"
   }
 }

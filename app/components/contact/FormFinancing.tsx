@@ -61,10 +61,10 @@ export default function Form() {
           modelo_car: modelo
         }
         formFinancing(newForm);
-        // console.log(newForm)
         toast.success("Formulario enviado con éxito")
         setTimeout(() => {
           router.push('/')
+          
         }, 2000)
       };
   return (
