@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Headermobile from "./components/Headermobile";
-import { unstable_ViewTransition as ViewTransition } from "react";
 import { FormContextProvider } from './context/FormContext';
 
 import { CarsProvider } from "./context/CarsContext";
@@ -41,11 +40,9 @@ export default function RootLayout({
         <FormContextProvider>
         <CarsProvider>
         <Header />
-        <ViewTransition name="page">
         <Headermobile />
         {children}
         <Social />
-        </ViewTransition>
         <Footer />
         </CarsProvider>
         </FormContextProvider>
