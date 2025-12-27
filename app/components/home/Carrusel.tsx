@@ -27,7 +27,7 @@ export default function Carrusel() {
         <img className="w-full object-cover max-h-200" src="/img.jpg" alt="img" />
         {/* <div className="w-full md:h-full hero object-center rounded-2xl" /> */}
         <div className="absolute inset-0 flex justify-between flex-col items-start p-6">
-          <h1 className=" text-white drop-shadow-lg shadow-black md:text-3xl font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
+          <h1 className=" text-white drop-shadow-lg shadow-black md:text-3xl text-md text-nowrap mt-26 md:mt-0 font-extrabold">¡Bienvenidos a Automotores Yrigoyen!</h1>
         </div>
     </section>
   );
