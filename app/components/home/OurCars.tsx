@@ -20,7 +20,7 @@ export default function OurCars() {
     <section className='text-black flex flex-col'>
         <h2 className='text-center my-8 font-bold text-3xl'>Nuestros vehiculos</h2>
         <ul className='md:grid flex flex-col items-center grid-cols-[repeat(auto-fill,minmax(250px,1fr))] md:place-items-center md:gap-32 gap-20 mx-20'>
-          {cars.slice(24,28).map((car) => (
+          {cars.slice(20,24).map((car) => (
             <Card key={car.ID} car={car} />
           ))} 
         </ul>
