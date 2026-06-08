@@ -42,8 +42,6 @@ const cars = [
 ];
 
 export default function Carousel() {
-  const { hola } = useContext(FiltersContext);
-  console.log(hola);
   const [currentIndex, setCurrentIndex] = useState(1);
   const [filteredCars, setFilteredCars] = useState([]);
   const [filters, setFilters] = useState(
@@ -76,7 +74,6 @@ export default function Carousel() {
     if (filters.maxPrice) {filtered = filtered.filter(car => car.precio <= Number(filters.maxPrice))};
 
     setFilteredCars(filtered);
-    console.log(filtered);
     
   }, [currentIndex, filters]);
 

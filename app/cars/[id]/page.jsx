@@ -1,7 +1,7 @@
 'use client'
 import CarruselImg from "@/app/components/cars/CarruselImg";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CarsContext } from "@/app/context/CarsContext";
 import Loading from "@/app/components/Loading";
 import { useCarForm } from "@/app/context/FormContext";
@@ -14,12 +14,12 @@ export default function CardIdPage({ params }) {
   const { getCarbyId } = useContext(CarsContext);
 
   const [currentCar, setCurrentCar] = useState(null);
-  const id = params.id;
+    const { id } = React.use(params)
 
 
   useEffect(() => {
     async function loadCar() {
-      const response = await getCarbyId(id); // <-- tu función que trae el producto
+      const response = await getCarbyId(id); // función que trae el producto
       setCurrentCar(response);
     }
 

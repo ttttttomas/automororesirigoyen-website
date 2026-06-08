@@ -33,7 +33,6 @@ export default function ProductsFilters() {
   const [minKm, setMinKm] = useState(200000);
   const [minPrice, setMinPrice] = useState(0);
   
-  console.log(minKm)
 
   const minKmId = useId();
   const minPriceId = useId(); 
@@ -201,6 +200,7 @@ useEffect(() => {
         <p className="text-white hidden">{minPrice}</p>
       </div>
         {loading ? <Loading /> : <Products products={filteredCars} />}
+        {/* <pre>{JSON.stringify(filteredCars, null, 2)}</pre> */}
     </section>
   );
 }

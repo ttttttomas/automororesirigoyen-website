@@ -52,7 +52,6 @@ const CotizaAutoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData)
     formSellCar(formData);
     toast.success("Formulario enviado con éxito")
     setTimeout(() => {
