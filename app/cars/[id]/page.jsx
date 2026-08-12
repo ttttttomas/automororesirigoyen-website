@@ -14,12 +14,12 @@ export default function CardIdPage({ params }) {
   const { getCarbyId } = useContext(CarsContext);
 
   const [currentCar, setCurrentCar] = useState(null);
-    const { id } = React.use(params)
+  const { id } = React.use(params)
 
 
   useEffect(() => {
     async function loadCar() {
-      const response = await getCarbyId(id); // función que trae el producto
+      const response = await getCarbyId(id);
       setCurrentCar(response);
     }
 
@@ -40,10 +40,10 @@ export default function CardIdPage({ params }) {
               <h1 className="text-3xl font-semibold">{currentCar.marca} {currentCar.modelo}</h1>
               <div className="flex flex-col gap-2 my-5">
                 <p>Precio: Consultar</p>
-                {/* <small className="text-sm">Precio contado</small>
-                <b className="text-2xl"> ${currentCar.precio.toLocaleString("es-AR")}</b>
+                <small className="text-sm">Precio contado</small>
+                <b className="text-2xl"> {currentCar.precio < 500000 ? 'USD ' : '$'}{currentCar.precio.toLocaleString("es-AR")}</b>
                 <small className="text-sm">Anticipo</small>
-                <small> ${currentCar.anticipo.toLocaleString("es-AR")}</small> */}
+                <small> ${currentCar.anticipo.toLocaleString("es-AR")}</small>
                 <div className="flex flex-col text-lg gap-2 my-5">
                   <p>Año: {currentCar.anio}</p>
                   <p>Kilometraje: {currentCar.km.toLocaleString("es-AR")}</p>

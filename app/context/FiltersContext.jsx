@@ -8,7 +8,7 @@ export const FiltersProvider = ({ children }) => {
   const [filters, setFilters] = useState({
     categoria: 'all',
     tipo: 'all',
-    minAño: 2010,
+    minAño: 2009,
     maxAño: 2025,
     combustible: 'all',
     minKm: 200000,

@@ -88,10 +88,10 @@ useEffect(() => {
     setFilters({
       categoria: 'all',
       tipo: 'all',
-      minAño: 2010,
+      minAño: 1900,
       maxAño: 2025,
       combustible: 'all',
-      minKm: 200000, 
+      minKm: 200000,
       minPrice: 40000000,
     })
     setCurrentIndex(1);
@@ -151,8 +151,8 @@ useEffect(() => {
           <p>Hasta</p>
           </div>
           <div className="flex w-full gap-5 md:flex-row justify-between">
-            <input max={2025} min={2011} value={filters.minAño} name="minAño" onChange={handleChangeFilters} placeholder="Año minimo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
-            <input min={2011} max={2025} value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full text-end px-1 text-sm py-1 border-gray-500 border" type="number" />
+            <input max={2025} min={1900} value={filters.minAño} name="minAño" onChange={handleChangeFilters} placeholder="Año minimo" className="md:w-32 w-full px-1 text-sm py-1 border-gray-500 border" type="number" />
+            <input min={1900} max={2025} value={filters.maxAño} name="maxAño" onChange={handleChangeFilters} placeholder="Año Maximo" className="md:w-32 w-full text-end px-1 text-sm py-1 border-gray-500 border" type="number" />
           </div>
 
           <p className="font-bold">Combustible</p>
